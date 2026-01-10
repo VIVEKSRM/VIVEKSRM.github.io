@@ -1149,3 +1149,15 @@ footer {
         user-select: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+
+/* Home page image alignment */
+.home-image {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.home-image img {
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+}

@@ -1161,3 +1161,45 @@ footer {
     height: auto;
     max-width: 100%;
 }
+/* Desktop layout: text left, image right */
+@media (min-width: 992px) {
+
+  .banner-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .container.banner-content {
+    flex: 1;
+    order: 1;
+  }
+
+  .home-image {
+    flex: 1;
+    order: 2;
+    text-align: right;
+  }
+
+  .home-image img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+/* Mobile safety */
+@media (max-width: 991px) {
+
+  .banner-container {
+    display: block;
+  }
+
+  .home-image {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .home-image img {
+    max-width: 80%;
+    height: auto;
+  }
+}
+

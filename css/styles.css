@@ -267,6 +267,21 @@ background: none;
     background: none;
 }
 
+/* Top-nav social icons (small, non-intrusive) */
+.navbar-nav > li.nav-social { margin: 0 6px; display: inline-block; }
+.navbar-nav > li.nav-social a { display: inline-block; padding: 25px 10px; border-radius: 4px; color: rgba(255,255,255,0.95); font-size: 16px; line-height: normal; transition: color 160ms ease, background 160ms ease; }
+.navbar-nav > li.nav-social a .fa { font-size:18px; vertical-align: middle; }
+/* monochrome by default; reveal brand color on hover */
+.navbar-nav > li.nav-social a.linkedin { color: rgba(255,255,255,0.95); }
+.navbar-nav > li.nav-social a.github { color: rgba(255,255,255,0.95); }
+.navbar-nav > li.nav-social a:hover { background: rgba(255,255,255,0.06); text-decoration: none; }
+.navbar-nav > li.nav-social a.linkedin:hover { color: #0A66C2; }
+.navbar-nav > li.nav-social a.github:hover { color: #24292e; }
+@media (max-width: 767px) {
+    .navbar-nav > li.nav-social { float: none; display: block; margin: 0; }
+    .navbar-nav > li.nav-social a { padding: 10px 15px; line-height: normal; height:auto; }
+}
+
 .navbar-nav > li:hover > a {
     color: #fff;
 }

@@ -182,4 +182,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
         pipelineSteps.forEach(step => pipelineObserver.observe(step));
     }
+
+    // 10. Image Lightbox
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        const lbImg = lightbox.querySelector('img');
+        const lbCaption = lightbox.querySelector('.lightbox-caption');
+        const lbClose = lightbox.querySelector('.lightbox-close');
+        const triggers = document.querySelectorAll('[data-lightbox]');
+
+        const openLightbox = (src, caption) => {
+            lbImg.src = src;
+            lbImg.alt = caption || '';
+            lbCaption.textContent = caption || '';
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            lbImg.src = '';
+        };
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                openLightbox(trigger.getAttribute('data-lightbox'), trigger.getAttribute('data-caption'));
+            });
+        });
+
+        lbClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+        });
+    }
 });

@@ -505,6 +505,132 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   .ai-flow { flex-wrap: wrap; gap: 8px; padding: 20px 14px; }
   .ai-flow-arrow { display: none; }
 }
+
+/* ═══════════════════════════════════════════════
+   12. RECOGNITION & AWARDS
+   ═══════════════════════════════════════════════ */
+.awards-split { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 50px; }
+.awards-col h3 { font-size: 1.15rem; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+.awards-col h3 i { color: var(--aqua); }
+.award-timeline { list-style: none; padding: 0; border-left: 2px solid var(--line); margin-left: 8px; }
+.award-timeline li {
+  position: relative; padding: 0 0 22px 24px; font-size: .86rem; color: var(--muted); line-height: 1.5;
+}
+.award-timeline li::before {
+  content: ''; position: absolute; left: -7px; top: 4px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--aqua); border: 3px solid var(--paper);
+}
+.award-timeline li strong { color: var(--ink); display: block; }
+.award-timeline li .yr { font: 500 .7rem 'DM Mono', monospace; color: var(--blue); }
+.award-gallery {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+.award-img {
+  position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4/3;
+  background: var(--mist); cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+.award-img:hover { transform: translateY(-4px); box-shadow: 0 16px 36px #102d4518; }
+.award-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.award-img:hover img { transform: scale(1.05); }
+.award-img .award-caption {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 12px;
+  background: linear-gradient(transparent, #000c); color: #fff;
+  font-size: .72rem; font-weight: 700;
+}
+
+/* Cert cards */
+.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+.cert-card {
+  padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff;
+  font-size: .82rem; transition: border-color .2s, box-shadow .2s;
+}
+.cert-card:hover { border-color: #8ddbd7; box-shadow: 0 8px 20px #102d4510; }
+.cert-card .cert-year { font: 500 .68rem 'DM Mono', monospace; color: var(--blue); margin-bottom: 4px; }
+.cert-card strong { display: block; color: var(--ink); font-size: .84rem; margin-bottom: 2px; }
+.cert-card span { color: var(--muted); font-size: .76rem; }
+.cert-card .cert-link {
+  display: inline-flex; align-items: center; gap: 5px; margin-top: 8px;
+  font-size: .72rem; font-weight: 700; color: var(--blue); text-decoration: none;
+  transition: color .2s;
+}
+.cert-card .cert-link:hover { color: var(--aqua); }
+.cert-card .cert-link i { font-size: .8rem; }
+
+/* ═══════════════════════════════════════════════
+   13. EDUCATION & RESEARCH
+   ═══════════════════════════════════════════════ */
+.edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 46px; }
+.edu-card {
+  display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding: 24px;
+  border: 1px solid #ffffff18; border-radius: 18px; background: #ffffff0a;
+  transition: background .25s;
+}
+.edu-card:hover { background: #ffffff10; }
+.edu-card-img { border-radius: 12px; overflow: hidden; aspect-ratio: 1; background: #ffffff14; }
+.edu-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.edu-card h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.edu-card .edu-org { font-size: .88rem; color: var(--aqua); font-weight: 600; margin-bottom: 4px; }
+.edu-card .edu-period { font: 500 .72rem 'DM Mono', monospace; color: #93a4b3; margin-bottom: 8px; }
+.edu-card p { font-size: .82rem; color: #b4c7d3; }
+
+.research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+.research-card {
+  position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4;
+  background: #ffffff14; cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+.research-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px #0008; }
+.research-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.research-card:hover img { transform: scale(1.05); }
+.research-card .research-caption {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 14px;
+  background: linear-gradient(transparent, #000c); color: #fff;
+  font-size: .72rem; font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════
+   IMAGE LIGHTBOX (CSS only)
+   ═══════════════════════════════════════════════ */
+.lightbox-overlay {
+  position: fixed; inset: 0; z-index: 100; background: #000d;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .3s;
+}
+.lightbox-overlay.active { opacity: 1; pointer-events: auto; }
+.lightbox-overlay img {
+  max-width: 90vw; max-height: 88vh; border-radius: 12px;
+  box-shadow: 0 20px 60px #000a; object-fit: contain;
+}
+.lightbox-close {
+  position: absolute; top: 24px; right: 28px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff2; border: 1px solid #fff4; color: #fff;
+  font-size: 1.3rem; cursor: pointer; display: grid; place-items: center;
+  transition: background .2s;
+}
+.lightbox-close:hover { background: #fff4; }
+.lightbox-caption {
+  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+  background: #fff2; backdrop-filter: blur(8px); color: #fff;
+  padding: 10px 20px; border-radius: 10px; font-size: .85rem; font-weight: 600;
+  max-width: 80vw; text-align: center;
+}
+
+/* Responsive additions for new sections */
+@media (max-width: 980px) {
+  .awards-split { grid-template-columns: 1fr; gap: 30px; }
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+  .edu-grid { grid-template-columns: 1fr; }
+  .research-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 510px) {
+  .award-gallery { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .edu-card { grid-template-columns: 100px 1fr; gap: 14px; padding: 16px; }
+  .research-grid { grid-template-columns: 1fr; }
+}
   </style>
 </head>
 <body>
@@ -527,6 +653,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
       <a href="#impact">Impact</a>
       <a href="#skills">Technology</a>
       <a href="#ai-future">AI &amp; Future</a>
+      <a href="#recognition">Awards</a>
       <a href="#contact">Connect</a>
       <span class="nav-social" aria-label="Social links">
         <a href="https://www.linkedin.com/in/vivek-ranjan-profile/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
@@ -1170,12 +1297,214 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     10. MUTUAL VALUE
+     10. RECOGNITION & AWARDS
      ═══════════════════════════════════════════════ -->
-<section id="value" class="section dark-section">
+<section id="recognition" class="section soft">
   <div class="shell">
     <div class="heading center reveal">
-      <p class="eyebrow">09 / Mutual value</p>
+      <p class="eyebrow">09 / Recognition</p>
+      <h2>Certifications, awards, and <em>continuous learning.</em></h2>
+    </div>
+
+    <div class="awards-split">
+      <!-- Awards Timeline -->
+      <div class="awards-col reveal">
+        <h3><i class="fa fa-trophy"></i> Awards &amp; Honours</h3>
+        <ul class="award-timeline">
+          <li><span class="yr">2026</span><strong>ACE Award — Tech Mahindra</strong>Third ACE Award across career; third recognition in 2025–26</li>
+          <li><span class="yr">2025</span><strong>Best Team Player — Tech Mahindra</strong>Recognised for cross-team collaboration and mentoring</li>
+          <li><span class="yr">2025</span><strong>Pat on the Back — Tech Mahindra</strong>Recognised for proactive delivery and ownership</li>
+          <li><span class="yr">2024</span><strong>Standing Ovation — Professionalism</strong>Tech Mahindra award for professional excellence</li>
+          <li><span class="yr">2024</span><strong>Night Owl Award — Tech Mahindra</strong>Dedication beyond regular hours for critical deliveries</li>
+          <li><span class="yr">2023</span><strong>Standing Ovation — Customer First</strong>Tech Mahindra award for customer-centric delivery</li>
+          <li><span class="yr">2022</span><strong>Pat on the Back — Tech Mahindra</strong>Early impact recognition after joining TechM</li>
+          <li><span class="yr">2021</span><strong>Celebrate Excellence (ACE) — Accenture</strong>For developing the NVT tool — 70% manual effort reduction</li>
+          <li><span class="yr">2019</span><strong>Celebrate Excellence (ACE) — Accenture</strong>Hackathon Event Winner</li>
+          <li><span class="yr">2018</span><strong>Apex Award — Delivery &amp; Profitability</strong>Accenture recognition for business impact</li>
+          <li><span class="yr">2017</span><strong>Stellar Award &amp; Apex Trailblazer — Accenture</strong>Innovation and trail-blazing quality engineering</li>
+          <li><span class="yr">2016</span><strong>Apex Trendsetter — Accenture</strong>Setting new benchmarks in automation</li>
+          <li><span class="yr">2012</span><strong>CANSAT Competition — NASA/AAS</strong>Second place in international CanSat Competition</li>
+          <li><span class="yr">2010</span><strong>Best Innovation Award — DRDO</strong>Defence Research innovation recognition</li>
+        </ul>
+      </div>
+
+      <!-- Award Images Gallery -->
+      <div class="awards-col reveal" data-delay="0.1s">
+        <h3><i class="fa fa-image"></i> Award Gallery</h3>
+        <div class="award-gallery">
+          <div class="award-img" data-lightbox="images/portfolio/Standing_Ovation_Award_Professionalism.png" data-caption="TechM Standing Ovation Award — Professionalism">
+            <img src="images/portfolio/Standing_Ovation_Award_Professionalism.png" alt="TechM Standing Ovation Award - Professionalism" loading="lazy">
+            <div class="award-caption">Standing Ovation — Professionalism</div>
+          </div>
+          <div class="award-img" data-lightbox="images/portfolio/All Certificates/Standing_Ovation_Award_Customer_First.png" data-caption="TechM Standing Ovation Award — Customer First">
+            <img src="images/portfolio/All Certificates/Standing_Ovation_Award_Customer_First.png" alt="TechM Standing Ovation Award - Customer First" loading="lazy">
+            <div class="award-caption">Standing Ovation — Customer First</div>
+          </div>
+          <div class="award-img" data-lightbox="images/portfolio/All Certificates/Pat_On_The_Back_Award.png" data-caption="Pat on the Back Award — Tech Mahindra">
+            <img src="images/portfolio/All Certificates/Pat_On_The_Back_Award.png" alt="Pat on the Back Award" loading="lazy">
+            <div class="award-caption">Pat on the Back Award</div>
+          </div>
+          <div class="award-img" data-lightbox="images/portfolio/All Certificates/Accenture_ACE_Award.jpg" data-caption="Accenture Celebrate Excellence (ACE) Award">
+            <img src="images/portfolio/All Certificates/Accenture_ACE_Award.jpg" alt="Accenture ACE Award" loading="lazy">
+            <div class="award-caption">Accenture ACE Award</div>
+          </div>
+          <div class="award-img" data-lightbox="images/portfolio/Accenture_InnovationAward.jpg" data-caption="Accenture Innovation Award">
+            <img src="images/portfolio/Accenture_InnovationAward.jpg" alt="Accenture Innovation Award" loading="lazy">
+            <div class="award-caption">Accenture Innovation Award</div>
+          </div>
+          <div class="award-img" data-lightbox="images/portfolio/Accenture_DiliveryAndProfitability.jpg" data-caption="Accenture Delivery & Profitability Award">
+            <img src="images/portfolio/Accenture_DiliveryAndProfitability.jpg" alt="Accenture Delivery and Profitability Award" loading="lazy">
+            <div class="award-caption">Delivery &amp; Profitability Award</div>
+          </div>
+          <div class="award-img" data-lightbox="images/portfolio/CANSAT_Compition.jpg" data-caption="CANSAT Competition Award — NASA/AAS">
+            <img src="images/portfolio/CANSAT_Compition.jpg" alt="CANSAT Competition Award" loading="lazy">
+            <div class="award-caption">CANSAT Competition — NASA/AAS</div>
+          </div>
+          <div class="award-img" data-lightbox="images/portfolio/DRDO.jpg" data-caption="DRDO Best Innovation Award">
+            <img src="images/portfolio/DRDO.jpg" alt="DRDO Best Innovation Award" loading="lazy">
+            <div class="award-caption">DRDO Best Innovation Award</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div style="margin-top:50px;" class="reveal">
+      <h3 style="font-size:1.15rem; margin-bottom:18px; display:flex; align-items:center; gap:10px;"><i class="fa fa-certificate" style="color:var(--blue);"></i> Certifications</h3>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-year">2026</div>
+          <strong>Build with Gemini — Platform IT Developer</strong>
+          <span>Google Cloud</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">2022</div>
+          <strong>Salesforce Certified Administrator</strong>
+          <span>Salesforce</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">2021</div>
+          <strong>OCI Associate Certification</strong>
+          <span>Oracle Cloud Infrastructure</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">2020</div>
+          <strong>AWS Solutions Architect — Associate</strong>
+          <span>Amazon Web Services</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">2020</div>
+          <strong>Full Stack Automation Engineer</strong>
+          <span>Industry Certification</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">2019</div>
+          <strong>Microsoft Azure Fundamentals (AZ-900)</strong>
+          <span>Microsoft</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">2018</div>
+          <strong>Automation Prime</strong>
+          <span>Accenture</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">2017</div>
+          <strong>ISTQB Foundation Level</strong>
+          <span>International Software Testing Qualifications Board</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-year">—</div>
+          <strong>Salesforce Trailblazer</strong>
+          <span>Salesforce Training Platform</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     11. EDUCATION & RESEARCH
+     ═══════════════════════════════════════════════ -->
+<section id="education" class="section dark-section">
+  <div class="shell">
+    <div class="heading center reveal">
+      <p class="eyebrow">10 / Education &amp; research</p>
+      <h2>Formal grounding, <em>applied leadership.</em></h2>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-card-img">
+          <img src="images/portfolio/IIM_C.jpg" alt="IIM Calcutta Campus" loading="lazy">
+        </div>
+        <div>
+          <h3>Executive Programme for Young Managers</h3>
+          <div class="edu-org">Indian Institute of Management, Calcutta</div>
+          <div class="edu-period">2016 – 2017 · Management</div>
+          <p>Strategic leadership, business analytics, and organisational behaviour — applied to engineering team management and quality transformation.</p>
+        </div>
+      </div>
+      <div class="edu-card reveal" data-delay="0.1s">
+        <div class="edu-card-img">
+          <img src="images/portfolio/Degree_Certificate.jpg" alt="B.Tech Degree Certificate" loading="lazy">
+        </div>
+        <div>
+          <h3>Bachelor of Technology</h3>
+          <div class="edu-org">SRM University, Chennai</div>
+          <div class="edu-period">2008 – 2012 · Electronics &amp; Instrumentation</div>
+          <p>Engineering foundations in systems design, signal processing, and embedded systems. Active in ROBOCON, CANSAT, and DRDO research.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Papers Gallery -->
+    <div style="margin-top:50px;" class="reveal">
+      <h3 style="font-size:1.15rem; margin-bottom:18px; display:flex; align-items:center; gap:10px; color:#fff;"><i class="fa fa-book" style="color:var(--aqua);"></i> Research &amp; Publications</h3>
+      <div class="research-grid">
+        <div class="research-card" data-lightbox="images/portfolio/DRDO_Paper_Clip.jpg" data-caption="DRDO Research Paper">
+          <img src="images/portfolio/DRDO_Paper_Clip.jpg" alt="DRDO Research Paper" loading="lazy">
+          <div class="research-caption">DRDO Research Paper</div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/DRDO_Paper_Clip_College.jpg" data-caption="DRDO Paper — College Presentation">
+          <img src="images/portfolio/DRDO_Paper_Clip_College.jpg" alt="DRDO Paper College Presentation" loading="lazy">
+          <div class="research-caption">DRDO — College Presentation</div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/NASA_Paper_Clip.jpg" data-caption="NASA CANSAT Research Paper">
+          <img src="images/portfolio/NASA_Paper_Clip.jpg" alt="NASA CANSAT Paper" loading="lazy">
+          <div class="research-caption">NASA CANSAT Paper</div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/DRDOPaperClip.jpg" data-caption="DRDO Paper Publication">
+          <img src="images/portfolio/DRDOPaperClip.jpg" alt="DRDO Paper Publication" loading="lazy">
+          <div class="research-caption">DRDO Paper Publication</div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/FrontPageDRDOPaperClip.jpg" data-caption="DRDO Paper Front Page">
+          <img src="images/portfolio/FrontPageDRDOPaperClip.jpg" alt="DRDO Paper Front Page" loading="lazy">
+          <div class="research-caption">DRDO Paper — Front Page</div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/All Certificates/Research_Paper.jpg" data-caption="Published Research Paper">
+          <img src="images/portfolio/All Certificates/Research_Paper.jpg" alt="Published Research Paper" loading="lazy">
+          <div class="research-caption">Published Research Paper</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIM Group Photo -->
+    <div style="margin-top:30px;" class="reveal">
+      <div class="research-card" style="aspect-ratio:16/7; max-width:700px; margin:0 auto;" data-lightbox="images/portfolio/IIMC_GroupPics.jpg" data-caption="IIM Calcutta — EPYM Batch">
+        <img src="images/portfolio/IIMC_GroupPics.jpg" alt="IIM Calcutta EPYM Group Photo" loading="lazy">
+        <div class="research-caption">IIM Calcutta — EPYM Batch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     12. MUTUAL VALUE
+     ═══════════════════════════════════════════════ -->
+<section id="value" class="section dark-section" style="margin-top:24px;">
+  <div class="shell">
+    <div class="heading center reveal">
+      <p class="eyebrow">11 / Mutual value</p>
       <h2>A partnership, not just a position.</h2>
     </div>
 
@@ -1217,7 +1546,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <section id="contact" class="contact-section">
   <div class="shell contact-grid reveal">
     <div>
-      <p class="eyebrow">10 / Let's connect</p>
+      <p class="eyebrow">12 / Let's connect</p>
       <h2>Let's build<br><em>better quality.</em></h2>
     </div>
     <div>
@@ -1232,6 +1561,13 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
     </div>
   </div>
 </section>
+
+<!-- Image Lightbox Overlay -->
+<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close image viewer"><i class="fa fa-times"></i></button>
+  <img src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
 
 </main>
 

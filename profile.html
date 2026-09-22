@@ -1,42 +1,898 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Vivek Ranjan — Quality Engineering Leader and AI-enabled automation specialist.">
-  <title>Vivek Ranjan | Quality Engineering Leader</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="font/css/font-awesome.min.css"><link rel="stylesheet" href="css/profile.css">
-  <style>
-    /* Profile-specific polish: preserve brand colours and make social actions easy to find. */
-    .logos { padding: 18px 24px; align-items: center; }
-    .logos img { width: 108px; height: 68px; padding: 7px; filter: none; opacity: 1; object-fit: contain; mix-blend-mode: normal; }
-    .nav-social { display: inline-flex; align-items: center; gap: 3px; margin-left: 5px; border-left: 1px solid #d8e2eb; padding-left: 7px; }
-    .nav-social a { display: grid; place-items: center; width: 33px; height: 33px; padding: 0; border-radius: 50%; color: #147aab; font-size: 1rem; }
-    .nav-social a:hover, .nav-social a:focus-visible { color: #fff; background: #147aab; outline: none; }
-    @media (max-width: 800px) { .nav-social { margin: 8px 0 0; padding: 8px 0 0; border-left: 0; border-top: 1px solid #d8e2eb; } .nav-social a { width: 38px; height: 38px; } }
-    @media (max-width: 510px) { .logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; } .logos img { width: 100%; height: 62px; } }
-    .tech-wall { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; margin-top: 42px; padding: 12px; border: 1px solid #ffffff24; border-radius: 20px; background: #ffffff0d; }
-    .tech-logo { display: grid; min-height: 108px; place-items: center; align-content: center; gap: 5px; padding: 9px 6px; border: 1px solid transparent; border-radius: 12px; background: #fff; color: #23435a; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
-    .tech-logo:hover { transform: translateY(-4px); border-color: #83e4d8; box-shadow: 0 12px 22px #0000002c; }
-    .tech-logo img { width: 76px; height: 57px; object-fit: contain; filter: none; opacity: 1; }
-    .tech-logo span { max-width: 100%; overflow: hidden; color: #516572; font-size: .66rem; font-weight: 800; line-height: 1.2; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
-    @media (max-width: 980px) { .tech-wall { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
-    @media (max-width: 680px) { .tech-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 28px; padding: 8px; } .tech-logo { min-height: 94px; } .tech-logo img { width: 66px; height: 49px; } }
-    @media (max-width: 390px) { .tech-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vivek Ranjan — Quality Engineering Leader. 14+ years leading test automation and QE transformation across Telecom, Healthcare and Fintech.">
+<title>Vivek Ranjan — Quality Engineering Leader</title>
+<link rel="icon" href="images/TitleLogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1A26;
+    --ink-2:#152435;
+    --ink-3:#1C2E43;
+    --paper:#F3F5F3;
+    --paper-2:#EAEDE9;
+    --text:#0F1720;
+    --text-soft:#4B5A66;
+    --on-ink:#E9EDF0;
+    --on-ink-soft:#93A4B3;
+    --teal:#33C9AD;
+    --amber:#F0AC4A;
+    --violet:#9C8CF2;
+    --coral:#F0806B;
+    --slate:#7C93AC;
+    --line-ink:rgba(233,237,240,0.12);
+    --line-paper:rgba(15,23,32,0.1);
+    --radius:3px;
+    --maxw:1120px;
+    --sans:'Inter', -apple-system, sans-serif;
+    --display:'Space Grotesk', var(--sans);
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
+  body{margin:0;font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1.15;font-weight:600;letter-spacing:-0.01em;}
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  .shell{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .label{font-family:var(--mono);font-size:0.8rem;color:var(--teal);letter-spacing:0.01em;}
+  .label::before{content:'// ';color:var(--text-soft);}
+  .label.on-ink::before{color:var(--on-ink-soft);}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--on-ink);padding:10px 16px;z-index:200;}
+  .skip-link:focus{left:12px;top:12px;}
+
+  /* progress bar */
+  #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--amber));width:0%;z-index:210;transition:width 0.08s linear;}
+
+  /* rotating status line */
+  .term-cycle{margin-top:22px;font-family:var(--mono);font-size:0.92rem;color:var(--teal);display:flex;align-items:center;gap:2px;min-height:1.4em;}
+  .term-cycle .txt{white-space:nowrap;overflow:hidden;}
+  .term-cycle .cursor{display:inline-block;width:8px;height:1.1em;background:var(--teal);animation:blink 1s step-end infinite;margin-left:2px;}
+  @keyframes blink{50%{opacity:0;}}
+
+  /* ticker */
+  .ticker-wrap{background:var(--ink-2);border-top:1px solid var(--line-ink);border-bottom:1px solid var(--line-ink);overflow:hidden;padding:14px 0;}
+  .ticker-track{display:flex;width:max-content;gap:48px;animation:ticker 38s linear infinite;}
+  .ticker-wrap:hover .ticker-track{animation-play-state:paused;}
+  .ticker-item{font-family:var(--mono);font-size:0.86rem;color:var(--on-ink-soft);white-space:nowrap;display:flex;align-items:center;gap:10px;}
+  .ticker-item b{color:var(--teal);font-weight:500;}
+  .ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--on-ink-soft);opacity:0.5;flex:none;}
+  @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{animation:none;flex-wrap:wrap;width:auto;}
+    .term-cycle .cursor{animation:none;}
+  }
+
+  /* header */
+  header.site{position:sticky;top:0;z-index:190;border-bottom:1px solid var(--line-ink);}
+  header.site::before{content:'';position:absolute;inset:0;z-index:-1;background:rgba(14,26,38,0.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
+  .nav-shell{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:var(--maxw);margin:0 auto;}
+  .brand{font-family:var(--mono);font-size:0.95rem;color:var(--on-ink);display:flex;align-items:center;gap:8px;}
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px rgba(51,201,173,0.18);}
+  nav.links{display:flex;align-items:center;gap:26px;}
+  nav.links a{font-size:0.92rem;color:var(--on-ink-soft);transition:color 0.15s;}
+  nav.links a:hover,nav.links a.active{color:var(--on-ink);}
+  nav.links a.active{border-bottom:2px solid var(--teal);padding-bottom:3px;}
+  .nav-cta{font-family:var(--mono);font-size:0.82rem;background:var(--teal);color:#052018;padding:8px 14px;border-radius:var(--radius);white-space:nowrap;}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line-ink);color:var(--on-ink);width:38px;height:38px;border-radius:var(--radius);position:relative;flex:none;}
+  .nav-toggle span{display:block;width:16px;height:2px;background:var(--on-ink);margin:3px auto;transition:transform 0.2s ease,opacity 0.2s ease;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg);}
+  @media (max-width:860px){
+    .nav-toggle{display:block;}
+    nav.links{
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      width:100%;
+      background:var(--ink);
+      flex-direction:column;
+      align-items:stretch;
+      justify-content:flex-start;
+      padding:0 28px;
+      gap:0;
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      pointer-events:none;
+      transition:max-height 0.28s ease, opacity 0.2s ease, padding 0.28s ease;
+      border-bottom:1px solid var(--line-ink);
+      box-shadow:0 16px 28px rgba(0,0,0,0.35);
+      z-index:5;
+    }
+    nav.links.open{
+      opacity:1;
+      pointer-events:auto;
+      max-height:420px;
+      padding:20px 28px 28px;
+    }
+    nav.links a{font-size:1.05rem;padding:12px 0;border-bottom:1px solid var(--line-ink);}
+    nav.links a:last-of-type{border-bottom:0;}
+    .nav-cta{align-self:flex-start;margin-top:14px;padding:10px 16px;}
+  }
+
+  /* hero */
+  .hero{background:var(--ink);color:var(--on-ink);padding:76px 0 92px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--line-ink) 1px,transparent 1px),linear-gradient(90deg,var(--line-ink) 1px,transparent 1px);background-size:42px 42px;-webkit-mask-image:radial-gradient(ellipse 70% 55% at 30% 20%,black 0%,transparent 72%);mask-image:radial-gradient(ellipse 70% 55% at 30% 20%,black 0%,transparent 72%);opacity:0.5;}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.25fr 0.95fr;gap:56px;align-items:start;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  .eyebrow-row{display:flex;align-items:center;gap:9px;margin-bottom:22px;}
+  .eyebrow-row .pulse{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2.2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  h1.hero-h{font-size:clamp(2.3rem,4.6vw,3.4rem);max-width:14ch;}
+  .hero-lead{margin-top:20px;font-size:1.08rem;color:var(--on-ink-soft);max-width:52ch;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:var(--radius);font-size:0.92rem;font-weight:500;}
+  .btn.primary{background:var(--teal);color:#052018;}
+  .btn.ghost{border:1px solid var(--line-ink);color:var(--on-ink);}
+  .btn svg{width:15px;height:15px;}
+  .btn.primary:hover{background:#4fdcc0;}
+  .btn.ghost:hover{border-color:var(--on-ink-soft);}
+
+  /* portrait */
+  .portrait{display:flex;align-items:center;gap:14px;background:var(--ink-2);border:1px solid var(--line-ink);border-radius:6px;padding:14px;margin-bottom:14px;}
+  .portrait img{width:64px;height:64px;border-radius:6px;object-fit:cover;flex:none;border:1px solid var(--line-ink);}
+  .portrait-tag{font-family:var(--mono);font-size:0.9rem;color:var(--on-ink);}
+
+  /* tech logo wall */
+  .tech-wall{display:flex;flex-wrap:wrap;gap:1px;background:var(--line-paper);border:1px solid var(--line-paper);margin-top:2px;}
+  .tech-logo{background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px 6px;flex:1 1 110px;min-width:88px;}
+  .tech-logo img{width:32px;height:32px;object-fit:contain;}
+  .tech-logo span{font-family:var(--mono);font-size:0.66rem;color:var(--text-soft);text-align:center;}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-paper);border:1px solid var(--line-paper);}
+  @media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);}}
+  .gallery-item{position:relative;background:var(--ink);aspect-ratio:4/3;overflow:hidden;display:block;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;display:block;}
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-item .cap{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(0deg,rgba(14,26,38,0.88),transparent);color:var(--on-ink);font-size:0.78rem;font-family:var(--mono);}
+
+  /* terminal panel */
+  .panel{background:var(--ink-2);border:1px solid var(--line-ink);border-radius:6px;overflow:hidden;}
+  .panel-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:var(--ink-3);border-bottom:1px solid var(--line-ink);}
+  .panel-bar span{width:9px;height:9px;border-radius:50%;background:#3A4B5E;}
+  .panel-bar .file{margin-left:8px;font-family:var(--mono);font-size:0.76rem;color:var(--on-ink-soft);}
+  .panel-body{padding:20px 20px 22px;}
+  .kv{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line-ink);font-family:var(--mono);font-size:0.85rem;}
+  .kv:last-of-type{border-bottom:0;}
+  .kv .k{color:var(--on-ink-soft);}
+  .kv .v{color:var(--on-ink);text-align:right;}
+  .status-pass{display:inline-flex;align-items:center;gap:6px;color:var(--teal);}
+  .status-pass::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px;border-top:1px solid var(--line-ink);padding-top:16px;}
+  .stat-row div{text-align:left;min-width:0;}
+  .stat-row b{display:block;font-family:var(--mono);font-size:1.35rem;color:var(--on-ink);white-space:nowrap;}
+  .stat-row small{color:var(--on-ink-soft);font-size:0.76rem;}
+  @media (max-width:380px){ .stat-row b{font-size:1.1rem;} .stat-row small{font-size:0.68rem;} }
+
+  /* approach principles */
+  .principle-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line-paper);border:1px solid var(--line-paper);}
+  @media (max-width:700px){.principle-grid{grid-template-columns:1fr;}}
+  .principle-card{background:var(--paper);padding:28px 26px;border-left:3px solid var(--cat,var(--teal));}
+  .principle-card h3{font-size:1.05rem;margin-bottom:16px;}
+  .pcx-row{margin-bottom:13px;}
+  .pcx-row:last-child{margin-bottom:0;}
+  .pcx-label{display:block;font-family:var(--mono);font-size:0.72rem;color:var(--cat,var(--teal));margin-bottom:4px;}
+  .pcx-row p{font-size:0.92rem;color:var(--text-soft);}
+
+  /* case studies */
+  .case-list{border-top:1px solid var(--line-paper);}
+  .case-item{padding:38px 0;border-bottom:1px solid var(--line-paper);display:grid;grid-template-columns:56px 1fr;gap:20px;}
+  @media (max-width:560px){.case-item{grid-template-columns:1fr;}}
+  .case-num{font-family:var(--mono);font-size:1.5rem;color:var(--teal);line-height:1;}
+  .case-item h3{font-size:1.15rem;margin-bottom:16px;max-width:48ch;}
+  .case-block{margin-bottom:13px;max-width:66ch;}
+  .case-block:last-child{margin-bottom:0;}
+  .case-label{font-family:var(--mono);font-size:0.72rem;color:var(--text-soft);display:block;margin-bottom:4px;}
+  .case-block p{font-size:0.96rem;color:var(--text-soft);}
+  .case-block.result p{color:var(--text);}
+  .case-block.result .case-label{color:var(--teal);}
+
+  /* sections generic */
+  .section{padding:88px 0;}
+  .section.alt{background:var(--paper-2);}
+  .section-head{margin-bottom:44px;max-width:60ch;}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.15rem);margin-top:10px;}
+  .section-head p.sub{margin-top:14px;color:var(--text-soft);font-size:1.02rem;}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-copy p{margin-bottom:16px;color:var(--text-soft);font-size:1.02rem;max-width:62ch;}
+  .about-copy p strong{color:var(--text);}
+  .fact-list{border-top:1px solid var(--line-paper);}
+  .fact-list li{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-paper);font-size:0.94rem;}
+  .fact-list li span:first-child{color:var(--text-soft);}
+  .fact-list li span:last-child{font-family:var(--mono);font-size:0.86rem;text-align:right;}
+
+  /* expertise */
+  .expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line-paper);border:1px solid var(--line-paper);}
+  @media (max-width:860px){.expertise-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.expertise-grid{grid-template-columns:1fr;}}
+  .expertise-card{background:var(--paper);padding:26px 24px;border-left:3px solid var(--cat,var(--teal));}
+  .expertise-card h3{font-size:1rem;margin-bottom:12px;}
+  .expertise-card ul li{font-size:0.9rem;color:var(--text-soft);padding:4px 0;}
+  .expertise-card ul li::before{content:'·';color:var(--cat,var(--teal));margin-right:8px;font-weight:700;}
+
+  /* timeline */
+  .timeline{position:relative;padding-left:26px;border-left:2px solid var(--line-paper);}
+  .tl-item{position:relative;padding-bottom:52px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-node{position:absolute;left:-31px;top:2px;width:12px;height:12px;background:var(--paper);border:2px solid var(--teal);}
+  .tl-item.past .tl-node{border-color:var(--slate);background:var(--paper);}
+  .tl-date{font-family:var(--mono);font-size:0.8rem;color:var(--text-soft);display:flex;gap:8px;align-items:center;margin-bottom:8px;}
+  .tl-date .status-pass{font-size:0.8rem;}
+  .tl-role{font-size:1.2rem;margin-bottom:2px;}
+  .tl-org{font-family:var(--mono);font-size:0.85rem;color:var(--teal);margin-bottom:14px;display:block;}
+  .tl-item ul{max-width:70ch;}
+  .tl-item ul li{position:relative;padding:5px 0 5px 18px;color:var(--text-soft);font-size:0.96rem;}
+  .tl-item ul li::before{content:'▸';position:absolute;left:0;color:var(--slate);font-size:0.8rem;top:7px;}
+  .progression{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .chip{font-family:var(--mono);font-size:0.76rem;color:var(--text-soft);background:var(--paper-2);border:1px solid var(--line-paper);padding:5px 10px;border-radius:20px;}
+  .chip-arrow{color:var(--slate);align-self:center;}
+
+  /* recognition */
+  .recog-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+  @media (max-width:860px){.recog-grid{grid-template-columns:1fr;}}
+  .badge-list{display:flex;flex-wrap:wrap;gap:10px;}
+  .badge{font-size:0.86rem;background:var(--paper);border:1px solid var(--line-paper);padding:9px 14px;border-radius:var(--radius);display:flex;align-items:center;gap:8px;}
+  .badge .sq{width:7px;height:7px;background:var(--amber);flex:none;}
+  .cert-list{border-top:1px solid var(--line-paper);}
+  .cert-row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line-paper);font-size:0.92rem;flex-wrap:wrap;}
+  .cert-row .cert-org{font-family:var(--mono);font-size:0.78rem;color:var(--text-soft);white-space:nowrap;}
+  .award-list li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-paper);font-size:0.92rem;}
+  .award-list li span:last-child{font-family:var(--mono);font-size:0.8rem;color:var(--text-soft);white-space:nowrap;}
+
+  /* testimonials */
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media (max-width:860px){.testi-grid{grid-template-columns:1fr;}}
+  .testi{background:var(--paper);border-top:3px solid var(--teal);padding:26px 26px 22px;}
+  .testi p.quote{font-size:1rem;color:var(--text);margin-bottom:18px;}
+  .testi .who{font-size:0.86rem;color:var(--text-soft);}
+  .testi .who b{color:var(--text);font-weight:600;}
+
+  /* education */
+  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  @media (max-width:860px){.edu-grid{grid-template-columns:1fr;}}
+  .edu-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .edu-card .org{font-family:var(--mono);color:var(--teal);font-size:0.85rem;display:block;margin-bottom:6px;}
+  .edu-card .yr{color:var(--text-soft);font-size:0.88rem;}
+  .lang-row{display:flex;gap:34px;margin-top:26px;}
+  .lang-row div b{display:block;font-family:var(--mono);}
+
+  /* contact */
+  .contact{background:var(--ink);color:var(--on-ink);padding:96px 0;}
+  .contact-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:end;}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  .contact h2{color:var(--on-ink);font-size:clamp(1.8rem,4vw,2.6rem);max-width:16ch;}
+  .contact-links{display:grid;gap:14px;}
+  .contact-links a{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border:1px solid var(--line-ink);border-radius:var(--radius);font-size:0.95rem;transition:border-color 0.15s,background 0.15s;}
+  .contact-links a:hover{border-color:var(--teal);background:rgba(51,201,173,0.06);}
+  .contact-links svg{width:15px;height:15px;color:var(--teal);}
+
+  footer.site{background:var(--ink);border-top:1px solid var(--line-ink);color:var(--on-ink-soft);padding:22px 0;}
+  .footer-shell{display:flex;justify-content:space-between;align-items:center;font-size:0.84rem;font-family:var(--mono);}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:600px){
+    .section{padding:56px 0;}
+    .hero{padding:56px 0 64px;}
+    .shell{padding:0 20px;}
+    .contact-links a{flex-wrap:wrap;gap:6px;word-break:break-word;}
+    .portrait img{width:52px;height:52px;}
+  }
+
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="shell nav-shell"><a class="brand" href="#home" aria-label="Vivek Ranjan home"><img src="images/TitleLogo.png" alt="Vivek Ranjan"></a><button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false"><i class="fa fa-bars"></i></button><nav id="mainNav" class="nav" aria-label="Primary navigation"><a href="#about">About</a><a href="#skills">Expertise</a><a href="#experience">Experience</a><a href="#portfolio">Highlights</a><a href="#contact">Contact</a><span class="nav-social" aria-label="Social links"><a href="https://www.linkedin.com/in/vivek-ranjan-profile/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa fa-linkedin"></i></a><a href="https://github.com/VIVEKSRM" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub"><i class="fa fa-github"></i></a></span><a class="nav-resume" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download>Résumé <i class="fa fa-download"></i></a></nav></div></header>
+<div id="progress"></div>
+
+<header class="site">
+  <div class="nav-shell">
+    <a class="brand" href="#top"><span class="dot"></span>vivek.ranjan</a>
+    <nav id="mainNav" class="links" aria-label="Primary">
+      <a href="#about">about</a>
+      <a href="#approach">approach</a>
+      <a href="#expertise">expertise</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#recognition">recognition</a>
+      <a href="#contact" class="nav-cta">say hello</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
 <main id="main">
-<section id="home" class="hero"><div class="shell hero-grid"><div class="reveal"><p class="eyebrow"><span></span>Available for quality leadership opportunities</p><h1>Engineering <em>confidence</em><br>into every release.</h1><p class="hero-lead">I’m Vivek Ranjan, a Quality Engineering Leader with 14+ years of experience building resilient, scalable test automation for complex enterprise systems.</p><div class="actions"><a class="button primary" href="#contact">Let’s connect <i class="fa fa-arrow-right"></i></a><a class="button secondary" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download><i class="fa fa-download"></i> Download résumé</a></div><dl class="stats"><div><dt>14+</dt><dd>years in QA</dd></div><div><dt>3K+</dt><dd>tests automated</dd></div><div><dt>40+</dt><dd>releases delivered</dd></div></dl></div><div class="hero-visual reveal"><div class="photo"><img src="images/HomePagePic.png" alt="Portrait of Vivek Ranjan"></div><div class="status"><b><i></i> Quality Tech Lead</b><small>AI-enabled automation</small></div><div class="tool"><i class="fa fa-code"></i> Playwright · Selenium · CI/CD</div></div></div></section>
-<section id="about" class="section soft"><div class="shell two-col"><div class="heading reveal"><p class="eyebrow">01 / About</p><h2>Quality that moves at the speed of delivery.</h2></div><div class="copy reveal"><p class="intro">I turn manual and legacy testing into dependable, automation-driven workflows that create faster feedback and greater release confidence.</p><p>My work spans functional, regression, API, integration, and mobile testing—built into CI/CD pipelines from the start. I pair practical engineering with clear communication, data-driven decisions, and maintainable design.</p><p>Across Telecom and Healthcare, I’ve led cross-functional teams and automation roadmaps that balance technical excellence with measurable business value.</p></div></div></section>
-<section class="section"><div class="shell"><div class="heading center reveal"><p class="eyebrow">What I deliver</p><h2>From quality strategy to reliable outcomes.</h2></div><div class="cards"><a href="ProjectDetails.html" class="card reveal"><i class="fa fa-sitemap"></i><h3>Projects delivered</h3><p>Automation and functional testing across 6+ projects and 40+ releases.</p><span>Explore projects <i class="fa fa-arrow-right"></i></span></a><a href="AssetCreation.html" class="card reveal"><i class="fa fa-lightbulb-o"></i><h3>Innovation assets</h3><p>Ideas and accelerators designed to improve delivery efficiency and profitability.</p><span>View assets <i class="fa fa-arrow-right"></i></span></a><a href="CertificationsAndAchivement.html" class="card reveal"><i class="fa fa-trophy"></i><h3>Recognition</h3><p>Professional certifications, achievements, and continuous learning.</p><span>See achievements <i class="fa fa-arrow-right"></i></span></a></div></div></section>
-<section id="skills" class="section dark"><div class="shell"><div class="heading split reveal"><div><p class="eyebrow">02 / Expertise</p><h2>A modern quality engineering toolkit.</h2></div><p>Hands-on across automation, cloud, DevOps, enterprise platforms, and emerging AI-assisted testing.</p></div><div class="skills reveal"><article><i class="fa fa-flask"></i><h3>Test automation</h3><p>Selenium WebDriver, Playwright, Cucumber (BDD), TestNG, API, regression & mobile testing</p></article><article><i class="fa fa-code-fork"></i><h3>DevOps & CI/CD</h3><p>Jenkins, Docker, GitHub, GitHub Actions, CI/CD pipelines, n8n orchestration</p></article><article><i class="fa fa-cloud"></i><h3>Cloud & platforms</h3><p>AWS, Salesforce CRM, Oracle BRM, REST APIs, JIRA and Confluence</p></article><article><i class="fa fa-terminal"></i><h3>Engineering</h3><p>Java, TypeScript / JavaScript, Unix shell scripting, MySQL and framework design</p></article></div><div class="tech-wall reveal" aria-label="Technology and platform experience"><div class="tech-logo"><img src="images/Skills/JavaLogo.png" alt="Java"><span>Java</span></div><div class="tech-logo"><img src="images/Skills/Selenium.jpg" alt="Selenium"><span>Selenium</span></div><div class="tech-logo"><img src="images/Skills/testngtutorial.png" alt="TestNG"><span>TestNG</span></div><div class="tech-logo"><img src="images/Skills/Playwright.png" alt="Playwright"><span>Playwright</span></div><div class="tech-logo"><img src="images/Skills/cucumber.png" alt="Cucumber"><span>Cucumber</span></div><div class="tech-logo"><img src="images/Skills/Jenkins.png" alt="Jenkins"><span>Jenkins</span></div><div class="tech-logo"><img src="images/Skills/github.png" alt="GitHub"><span>GitHub</span></div><div class="tech-logo"><img src="images/Skills/Docker.png" alt="Docker"><span>Docker</span></div><div class="tech-logo"><img src="images/Skills/Kubernetes.png" alt="Kubernetes"><span>Kubernetes</span></div><div class="tech-logo"><img src="images/Skills/TerraForm.png" alt="Terraform"><span>Terraform</span></div><div class="tech-logo"><img src="images/Skills/salesforce.svg" alt="Salesforce"><span>Salesforce</span></div><div class="tech-logo"><img src="images/Skills/OracleBRM.png" alt="Oracle BRM"><span>Oracle BRM</span></div><div class="tech-logo"><img src="images/Skills/MySQL.png" alt="MySQL"><span>MySQL</span></div><div class="tech-logo"><img src="images/Skills/UNIX.png" alt="Unix shell scripting"><span>Unix</span></div><div class="tech-logo"><img src="images/Skills/LambdaTest.png" alt="LambdaTest"><span>LambdaTest</span></div><div class="tech-logo"><img src="images/Skills/Applitools.png" alt="Applitools"><span>Applitools</span></div><div class="tech-logo"><img src="images/Skills/HPQC.png" alt="HP Quality Center"><span>HP QC</span></div><div class="tech-logo"><img src="images/Skills/Sikuli.jpg" alt="Sikuli"><span>Sikuli</span></div><div class="tech-logo"><img src="images/Skills/eggplant.png" alt="Eggplant"><span>Eggplant</span></div><div class="tech-logo"><img src="images/Skills/Screenster.jpg" alt="Screenster"><span>Screenster</span></div><div class="tech-logo"><img src="images/Skills/ApacheTomCat.jpg" alt="Apache Tomcat"><span>Tomcat</span></div></div></div></section>
-<section id="experience" class="section"><div class="shell"><div class="heading split reveal"><div><p class="eyebrow">03 / Experience</p><h2>Building quality systems that scale.</h2></div><p>A career defined by hands-on delivery, team leadership, and continuous evolution in automation.</p></div><ol class="timeline"><li class="reveal"><time>Jul 2026 <span>Present</span></time><article><p>Various clients & projects</p><h3>Lead — AI & Automation Initiatives</h3><ul><li>Architecting resilient E2E solutions with Playwright and Playwright MCP.</li><li>Orchestrating automation workflows with n8n and integrating Jira and Confluence.</li></ul></article></li><li class="reveal"><time>Jan 2025 <span>Jul 2026</span></time><article><p>Multiple projects / internal initiatives</p><h3>Lead QA Engineer — Automation Reliability</h3><ul><li>Introduced Healium self-healing to reduce flaky failures and maintenance.</li><li>Optimized GitHub Actions pipelines, reducing full-suite execution by approximately 60%.</li></ul></article></li><li class="reveal"><time>Apr 2022 <span>Jan 2025</span></time><article><p>Tech Mahindra · Pune</p><h3>QA Tech Lead</h3><ul><li>Enhanced a Salesforce CRM E2E framework and automated 1,000+ test cases.</li><li>Mentored 18 engineers and owned test estimation and execution.</li></ul></article></li><li class="reveal"><time>Nov 2020 <span>Apr 2022</span></time><article><p>Accenture · Pune</p><h3>QA Associate Manager (SDET)</h3><ul><li>Led Telecom automation across BRM, OSS/BSS and E2E Finance, delivering 2,000+ tests.</li><li>Migrated BDD from JBehave to TestNG and automated critical workflows.</li></ul></article></li><li class="reveal"><time>2012 <span>2020</span></time><article><p>Accenture · Pune</p><h3>Quality Analyst → Quality Analyst Lead</h3><ul><li>Led a team of 7+ and delivered 1,000+ functional test cases.</li><li>Automated Siebel CRM and Mediation Zone using Selenium and Unix shell scripts.</li></ul></article></li></ol></div></section>
-<section id="portfolio" class="section soft"><div class="shell"><div class="heading split reveal"><div><p class="eyebrow">04 / Highlights</p><h2>Recognition, research, and learning.</h2></div><a class="text-link" href="More.html">View all highlights <i class="fa fa-arrow-right"></i></a></div><div class="filters reveal" role="group" aria-label="Filter highlights"><button class="active" data-filter="all">All</button><button data-filter="award">Awards</button><button data-filter="education">Education</button><button data-filter="research">Research</button><button data-filter="moments">Moments</button></div><div class="portfolio"><a class="portfolio-card reveal" data-category="award" href="images/portfolio/Standing_Ovation_Award_Professionalism.png" target="_blank"><img src="images/portfolio/Standing_Ovation_Award_Professionalism.png" alt="Tech Mahindra Standing Ovation Award"><span>Award</span><h3>TechM Standing Ovation Award</h3></a><a class="portfolio-card reveal" data-category="award" href="images/portfolio/Accenture_InnovationAward.jpg" target="_blank"><img src="images/portfolio/Accenture_InnovationAward.jpg" alt="Accenture Innovation Award"><span>Award</span><h3>Accenture Innovation Award</h3></a><a class="portfolio-card reveal" data-category="award" href="images/portfolio/Accenture_DiliveryAndProfitability.jpg" target="_blank"><img src="images/portfolio/Accenture_DiliveryAndProfitability.jpg" alt="Accenture Delivery and Profitability Award"><span>Award</span><h3>Delivery & Profitability Award</h3></a><a class="portfolio-card reveal" data-category="award" href="images/portfolio/CANSAT_Compition.jpg" target="_blank"><img src="images/portfolio/CANSAT_Compition.jpg" alt="CANSAT competition award"><span>Award</span><h3>CANSAT Competition Award</h3></a><a class="portfolio-card reveal" data-category="award" href="images/portfolio/DRDO.jpg" target="_blank"><img src="images/portfolio/DRDO.jpg" alt="DRDO Best Innovation Award"><span>Award</span><h3>DRDO Best Innovation Award</h3></a><a class="portfolio-card reveal" data-category="education" href="images/portfolio/IIM_C.jpg" target="_blank"><img src="images/portfolio/IIM_C.jpg" alt="IIM Calcutta Executive MBA"><span>Education</span><h3>IIM Calcutta Executive MBA</h3></a><a class="portfolio-card reveal" data-category="education" href="images/portfolio/IIMC_GroupPics.jpg" target="_blank"><img src="images/portfolio/IIMC_GroupPics.jpg" alt="IIM Calcutta group photograph"><span>Education</span><h3>IIM Calcutta cohort</h3></a><a class="portfolio-card reveal" data-category="education" href="images/portfolio/Degree_Certificate.jpg" target="_blank"><img src="images/portfolio/Degree_Certificate.jpg" alt="Bachelor of Technology degree certificate"><span>Education</span><h3>B.Tech degree</h3></a><a class="portfolio-card reveal" data-category="research" href="WhitePapers.html"><img src="images/portfolio/DRDO_Paper_Clip.jpg" alt="DRDO paper clipping"><span>Research</span><h3>DRDO paper</h3></a><a class="portfolio-card reveal" data-category="research" href="WhitePapers.html"><img src="images/portfolio/DRDO_Paper_Clip_College.jpg" alt="DRDO college paper clipping"><span>Research</span><h3>DRDO college paper</h3></a><a class="portfolio-card reveal" data-category="research" href="WhitePapers.html"><img src="images/portfolio/DRDOPaperClip.jpg" alt="DRDO research paper clipping"><span>Research</span><h3>DRDO research feature</h3></a><a class="portfolio-card reveal" data-category="research" href="WhitePapers.html"><img src="images/portfolio/NASA_Paper_Clip.jpg" alt="NASA paper clipping"><span>Research</span><h3>CANSAT / NASA paper</h3></a><a class="portfolio-card reveal" data-category="moments" href="images/portfolio/CollageJPG.jpg" target="_blank"><img src="images/portfolio/CollageJPG.jpg" alt="Professional collage"><span>Moments</span><h3>Professional journey</h3></a></div></div></section>
-<section id="contact" class="contact"><div class="shell contact-grid reveal"><div><p class="eyebrow">05 / Contact</p><h2>Let’s build<br><em>better quality.</em></h2></div><div><p>For enterprise automation leadership or quality engineering opportunities, I’d be glad to connect.</p><a class="email" href="mailto:vivek.ranjan.srm@gmail.com">vivek.ranjan.srm@gmail.com</a><p><a href="tel:+917507416993">+91 7507416993</a></p><div class="social"><a href="https://www.linkedin.com/in/vivek-ranjan-profile/" target="_blank" rel="noopener">LinkedIn <i class="fa fa-arrow-up"></i></a><a href="https://github.com/VIVEKSRM" target="_blank" rel="noopener">GitHub <i class="fa fa-arrow-up"></i></a></div></div></div></section>
+
+<section class="hero" id="top">
+  <div class="shell hero-grid">
+    <div>
+      <div class="eyebrow-row"><span class="pulse"></span><span class="label on-ink">open to quality engineering leadership roles</span></div>
+      <h1 class="hero-h">Quality engineering, built to hold at scale.</h1>
+      <p class="hero-lead">I'm Vivek Ranjan — a Quality Engineering Leader with 14+ years turning fragile, manual testing into resilient, CI/CD-native automation across Telecom, Healthcare and Fintech. I don't just run tests — I build the systems and judgment that let a business ship faster while the team spends less time firefighting.</p>
+      <div class="term-cycle" aria-hidden="true"><span>&gt;</span>&nbsp;<span class="txt" id="cycleText">role: QE Transformation Leader</span><span class="cursor"></span></div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#contact">Let's talk <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download>Download résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></a>
+      </div>
+    </div>
+    <div class="reveal">
+    <div class="portrait">
+      <img src="https://vivekranjan.in/images/HomePagePic.png" alt="Portrait of Vivek Ranjan">
+      <span class="portrait-tag">Vivek Ranjan</span>
+    </div>
+    <div class="panel">
+      <div class="panel-bar"><span></span><span></span><span></span><span class="file">profile · status</span></div>
+      <div class="panel-body">
+        <div class="kv"><span class="k">role</span><span class="v">Technical Lead, QA Automation</span></div>
+        <div class="kv"><span class="k">company</span><span class="v">Tech Mahindra</span></div>
+        <div class="kv"><span class="k">domains</span><span class="v">Telecom · Healthcare · Fintech</span></div>
+        <div class="kv"><span class="k">location</span><span class="v">Pune, India</span></div>
+        <div class="kv"><span class="k">build</span><span class="v status-pass">passing</span></div>
+        <div class="stat-row">
+          <div><b>14+</b><small>years experience</small></div>
+          <div><b>18</b><small>engineers led</small></div>
+          <div><b>~40%</b><small>cycle time cut</small></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-wrap" role="marquee" aria-label="Selected results and feedback">
+  <div class="ticker-track" id="tickerTrack">
+    <span class="ticker-item"><b>~40%</b> faster regression cycles on Salesforce CRM<span class="ticker-dot"></span></span>
+    <span class="ticker-item">"resolves issues quickly, keeps the team motivated" — Annu Gupta<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>1M+</b> customers protected by automated billing reconciliation<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>2,000+</b> test cases automated across Telecom BRM<span class="ticker-dot"></span></span>
+    <span class="ticker-item">"breaks down complex problems, gives clear direction" — Meenu Gandash<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>~70%</b> cut in manual effort — NVT Philippines→India transition<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>18</b> engineers led across concurrent Salesforce releases<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>~60%</b> faster full-suite execution after CI/CD migration<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>~40%</b> faster regression cycles on Salesforce CRM<span class="ticker-dot"></span></span>
+    <span class="ticker-item">"resolves issues quickly, keeps the team motivated" — Annu Gupta<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>1M+</b> customers protected by automated billing reconciliation<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>2,000+</b> test cases automated across Telecom BRM<span class="ticker-dot"></span></span>
+    <span class="ticker-item">"breaks down complex problems, gives clear direction" — Meenu Gandash<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>~70%</b> cut in manual effort — NVT Philippines→India transition<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>18</b> engineers led across concurrent Salesforce releases<span class="ticker-dot"></span></span>
+    <span class="ticker-item"><b>~60%</b> faster full-suite execution after CI/CD migration<span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<section id="about" class="section">
+  <div class="shell about-grid">
+    <div>
+      <span class="label">about</span>
+      <div class="section-head" style="margin-bottom:24px;">
+        <h2>From manual bottlenecks to automated confidence.</h2>
+      </div>
+      <div class="about-copy reveal">
+        <p>I lead quality engineering and automation strategy for enterprise platforms — most recently <strong>Salesforce CRM programs in the US healthcare domain</strong>, where I own validation of critical financial workflows including <strong>Lease Rewrites and Recurring Payments</strong>. Before that, over nine years at Accenture automating large-scale Telecom billing and CRM systems.</p>
+        <p>My work sits at the intersection of <strong>engineering and governance</strong>: building scalable Selenium and Playwright frameworks, defining CI/CD-driven quality gates, and designing intelligent tooling — like a RAG-based execution analytics dashboard — that helps teams focus testing effort where risk actually lives.</p>
+        <p>I've led teams of 15–20 engineers, and I'm increasingly focused on <strong>AI-assisted engineering</strong>: using tools like GitHub Copilot and Claude to accelerate framework design without losing architectural judgment.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <ul class="fact-list">
+        <li><span>Based in</span><span>Pune, India</span></li>
+        <li><span>Experience</span><span>14+ years</span></li>
+        <li><span>Current team</span><span>~18 engineers</span></li>
+        <li><span>Domains</span><span>Telecom, Healthcare, Fintech</span></li>
+        <li><span>Languages</span><span>English (C2), Hindi (C2)</span></li>
+        <li><span>Education</span><span>Executive MBA, IIM Calcutta</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="approach" class="section alt">
+  <div class="shell">
+    <span class="label">how i work</span>
+    <div class="section-head">
+      <h2>Quality engineering is a business lever, not a checkpoint.</h2>
+      <p class="sub">Four principles I apply consistently — each built around a real failure mode I've seen play out, and what it costs when nobody addresses it.</p>
+    </div>
+    <div class="principle-grid reveal">
+      <div class="principle-card" style="--cat:var(--teal)">
+        <h3>Risk-first, not coverage-first</h3>
+        <div class="pcx-row"><span class="pcx-label">the problem</span><p>Teams chase test-count and coverage percentages while the automation that actually matters — high-risk financial and compliance workflows — gets the same attention as low-stakes screens.</p></div>
+        <div class="pcx-row"><span class="pcx-label">my approach</span><p>I build RAG-based execution analytics that flag which features carry real business risk, and route testing effort there first — coverage follows risk, not the other way round.</p></div>
+        <div class="pcx-row"><span class="pcx-label">what it delivers</span><p>Fewer production defects where they'd hurt most, and less engineering time spent validating things that were never going to break.</p></div>
+      </div>
+      <div class="principle-card" style="--cat:var(--violet)">
+        <h3>Automation as infrastructure, not scripts</h3>
+        <div class="pcx-row"><span class="pcx-label">the problem</span><p>Automation suites are often written to pass today's build, not to survive six months of UI and API change — they quietly rot into something nobody trusts.</p></div>
+        <div class="pcx-row"><span class="pcx-label">my approach</span><p>I architect frameworks with self-healing locators, modular page objects, and CI/CD-native pipelines designed to be maintained by a team, not just their original author.</p></div>
+        <div class="pcx-row"><span class="pcx-label">what it delivers</span><p>Releases ship on schedule instead of being held up by flaky-test triage — and the framework outlives any one engineer's tenure.</p></div>
+      </div>
+      <div class="principle-card" style="--cat:var(--amber)">
+        <h3>Governance that scales with headcount</h3>
+        <div class="pcx-row"><span class="pcx-label">the problem</span><p>What works for a 7-person team breaks down at 18+ — informal practices turn into inconsistent coverage, duplicated effort, and defects that fall through the cracks.</p></div>
+        <div class="pcx-row"><span class="pcx-label">my approach</span><p>I define test strategy, coding standards, and defect-management workflows early enough that growth doesn't force a rebuild — governance as a system, not a rescue plan.</p></div>
+        <div class="pcx-row"><span class="pcx-label">what it delivers</span><p>Leadership gets predictable, auditable delivery; engineers get clarity on ownership instead of ambiguity.</p></div>
+      </div>
+      <div class="principle-card" style="--cat:var(--coral)">
+        <h3>AI as an accelerant, not a shortcut</h3>
+        <div class="pcx-row"><span class="pcx-label">the problem</span><p>AI tools promise speed, but used carelessly they erode the architectural judgment that makes a framework maintainable in the first place.</p></div>
+        <div class="pcx-row"><span class="pcx-label">my approach</span><p>I use GitHub Copilot and Claude to remove repetitive framework-building work, while keeping every design and risk decision human-reviewed and intentional.</p></div>
+        <div class="pcx-row"><span class="pcx-label">what it delivers</span><p>Framework build-out that used to take weeks now takes days — without trading away long-term maintainability for short-term velocity.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="case-studies" class="section">
+  <div class="shell">
+    <span class="label">problems i've solved</span>
+    <div class="section-head">
+      <h2>A few of the harder problems, worked through end to end.</h2>
+    </div>
+    <div class="case-list">
+      <div class="case-item reveal">
+        <span class="case-num">01</span>
+        <div>
+          <h3>Cutting release risk on financial transaction workflows without slowing releases down</h3>
+          <div class="case-block"><span class="case-label">problem</span><p>Lease Rewrites and Recurring Payments carried real financial and compliance exposure, and manual validation couldn't keep pace with the release cadence the business needed.</p></div>
+          <div class="case-block"><span class="case-label">approach</span><p>I owned end-to-end automation of these workflows — layering REST Assured API validation beneath UI automation — and built the Honeycomb Reporting Tool to score features by risk (RAG status), so testing effort concentrated where a failure would actually hurt.</p></div>
+          <div class="case-block result"><span class="case-label">result</span><p>Transaction reliability held release over release, and regression cycle time dropped ~40% — faster releases without trading away financial-compliance confidence, for the business or for me as the person accountable for it.</p></div>
+        </div>
+      </div>
+      <div class="case-item reveal">
+        <span class="case-num">02</span>
+        <div>
+          <h3>Protecting billing accuracy at 1M+ customer scale</h3>
+          <div class="case-block"><span class="case-label">problem</span><p>Reconciliation errors in Oracle BRM billing risked incorrect charges across a Telecom client's B2C base of over one million customers — a manual-audit process couldn't catch everything.</p></div>
+          <div class="case-block"><span class="case-label">approach</span><p>I automated CDR rating, reconciliation, and payment validation across the OSS/BSS stack, replacing manual spot-checks with repeatable, always-on verification.</p></div>
+          <div class="case-block result"><span class="case-label">result</span><p>Billing accuracy improved for 1M+ customers, cutting regulatory and reputational risk for the client — and giving the QA team a system they could trust instead of double-checking by hand.</p></div>
+        </div>
+      </div>
+      <div class="case-item reveal">
+        <span class="case-num">03</span>
+        <div>
+          <h3>Turning a cost problem into a durable in-house capability</h3>
+          <div class="case-block"><span class="case-label">problem</span><p>Network Verification Testing was running manually out of the Philippines — expensive, hard to scale, and disconnected from the India delivery teams driving the rest of the program.</p></div>
+          <div class="case-block"><span class="case-label">approach</span><p>I led the transition to India, building and training an 8-person team from scratch, then automated the workflow itself using Selenium and shell scripting rather than just relocating the manual process.</p></div>
+          <div class="case-block result"><span class="case-label">result</span><p>Manual verification effort dropped ~70%, and the client kept a lower-cost, higher-skill capability in-house — a repeatable playbook, not a one-time fix, and a team that grew because of it.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise" class="section alt">
+  <div class="shell">
+    <span class="label">expertise</span>
+    <div class="section-head">
+      <h2>A quality toolkit built for enterprise scale.</h2>
+      <p class="sub">Hands-on across automation, DevOps, cloud, and the AI-assisted tooling reshaping how test engineering gets done.</p>
+    </div>
+    <div class="expertise-grid reveal">
+      <div class="expertise-card" style="--cat:var(--teal)">
+        <h3>Automation & testing</h3>
+        <ul>
+          <li>Selenium WebDriver</li>
+          <li>Playwright (working knowledge)</li>
+          <li>REST Assured — API automation</li>
+          <li>TestNG · Cucumber (BDD)</li>
+          <li>Automation framework design & architecture</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--violet)">
+        <h3>Programming</h3>
+        <ul>
+          <li>Core Java — OOP, collections, multithreading</li>
+          <li>Shell scripting</li>
+          <li>JavaScript / TypeScript (working knowledge)</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--amber)">
+        <h3>DevOps & delivery</h3>
+        <ul>
+          <li>Jenkins · Docker · Maven</li>
+          <li>GitHub · GitHub Actions</li>
+          <li>CI/CD pipelines · JIRA</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--slate)">
+        <h3>Cloud & platforms</h3>
+        <ul>
+          <li>AWS (working knowledge)</li>
+          <li>Salesforce Admin & CRM automation</li>
+          <li>Oracle BRM · OSS/BSS systems</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--coral)">
+        <h3>AI-assisted engineering</h3>
+        <ul>
+          <li>GitHub Copilot</li>
+          <li>Claude AI (proof-of-concept usage)</li>
+          <li>RAG-based execution analytics</li>
+          <li>AI-assisted test development</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--teal)">
+        <h3>Leadership & strategy</h3>
+        <ul>
+          <li>QE transformation & automation roadmap</li>
+          <li>Test governance & quality metrics</li>
+          <li>Stakeholder management</li>
+          <li>Agile delivery & program governance</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tech-wall reveal" aria-label="Tools and platforms">
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/JavaLogo.png" alt="Java"><span>Java</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Selenium.jpg" alt="Selenium"><span>Selenium</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Playwright.png" alt="Playwright"><span>Playwright</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/testngtutorial.png" alt="TestNG"><span>TestNG</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/cucumber.png" alt="Cucumber"><span>Cucumber</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Jenkins.png" alt="Jenkins"><span>Jenkins</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Docker.png" alt="Docker"><span>Docker</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Kubernetes.png" alt="Kubernetes"><span>Kubernetes</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/github.png" alt="GitHub"><span>GitHub</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/TerraForm.png" alt="Terraform"><span>Terraform</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/salesforce.svg" alt="Salesforce"><span>Salesforce</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/OracleBRM.png" alt="Oracle BRM"><span>Oracle BRM</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/MySQL.png" alt="MySQL"><span>MySQL</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/UNIX.png" alt="Unix shell scripting"><span>Unix</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/LambdaTest.png" alt="LambdaTest"><span>LambdaTest</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Applitools.png" alt="Applitools"><span>Applitools</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/HPQC.png" alt="HP Quality Center"><span>HP QC</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Sikuli.jpg" alt="Sikuli"><span>Sikuli</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/eggplant.png" alt="Eggplant"><span>Eggplant</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/Screenster.jpg" alt="Screenster"><span>Screenster</span></div>
+      <div class="tech-logo"><img src="https://vivekranjan.in/images/Skills/ApacheTomCat.jpg" alt="Apache Tomcat"><span>Tomcat</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="shell">
+    <span class="label">career record</span>
+    <div class="section-head">
+      <h2>The full record behind those results.</h2>
+      <p class="sub">Every role, in order — the evidence trail for the approach above.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-node"></div>
+        <div class="tl-date">07/2026 <span>→</span> Present <span class="status-pass">current</span></div>
+        <h3 class="tl-role">Lead — AI &amp; Automation Initiatives</h3>
+        <span class="tl-org">Tech Mahindra · Various clients &amp; projects</span>
+        <ul>
+          <li>Architecting resilient E2E automation solutions using Playwright and Playwright MCP for AI-driven testing.</li>
+          <li>Orchestrating cross-project automation workflows with n8n, integrated with Jira and Confluence for traceability and stakeholder reporting.</li>
+          <li>Own validation of critical financial workflows — Lease Rewrites and Recurring Payments — ensuring end-to-end transaction reliability.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-node"></div>
+        <div class="tl-date">01/2025 <span>→</span> 07/2026 · 1 yr 6 mos</div>
+        <h3 class="tl-role">Lead QA Engineer — Automation Reliability</h3>
+        <span class="tl-org">Tech Mahindra · Multiple projects / internal initiatives</span>
+        <ul>
+          <li>Introduced self-healing capabilities (Healium) into Selenium frameworks, reducing flaky failures and maintenance overhead.</li>
+          <li>Migrated pipelines to GitHub Actions and optimized execution, cutting full-suite regression time by ~60%.</li>
+          <li>Designed the Honeycomb Reporting Tool — a RAG-based execution analytics dashboard enabling risk-based, feature-level testing.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-node"></div>
+        <div class="tl-date">04/2022 <span>→</span> 01/2025 · 2 yrs 9 mos</div>
+        <h3 class="tl-role">QA Technical Lead</h3>
+        <span class="tl-org">Tech Mahindra · Pune · Salesforce CRM, Healthcare domain</span>
+        <ul>
+          <li>Architected and enhanced Selenium-based automation for Salesforce CRM, automating 1,000+ test cases and cutting regression cycle time by ~40%.</li>
+          <li>Led and mentored a team of ~18 automation engineers, establishing QA practices aligned with enterprise standards.</li>
+          <li>Built API automation with REST Assured and Postman, and designed automated PDF audit verification utilities that eliminated 100% manual validation effort.</li>
+          <li>Recognized with multiple performance awards: Best Team Player, Pat on the Back, and Night Owl Award.</li>
+        </ul>
+      </div>
+      <div class="tl-item past reveal">
+        <div class="tl-node"></div>
+        <div class="tl-date">11/2020 <span>→</span> 04/2022 · 1 yr 5 mos</div>
+        <h3 class="tl-role">QA Associate Manager (SDET)</h3>
+        <span class="tl-org">Accenture · Pune · Oracle CRM, Telecom domain</span>
+        <ul>
+          <li>Led automation delivery across large Telecom programs — estimation, planning, and execution — automating 2,000+ test cases.</li>
+          <li>Automated critical BRM workflows: CDR rating, reconciliation, billing and payments across OSS/BSS ecosystems (Oracle BRM, Siebel CRM).</li>
+          <li>Migrated a legacy BDD framework from JBehave to TestNG, improving stability and cutting execution time by ~30%.</li>
+          <li>Led transition of Network Verification Testing (NVT) from the Philippines to India, building and scaling an 8-person team.</li>
+        </ul>
+      </div>
+      <div class="tl-item past reveal">
+        <div class="tl-node"></div>
+        <div class="tl-date">05/2017 <span>→</span> 11/2020 · 3 yrs 6 mos</div>
+        <h3 class="tl-role">Quality Analyst Lead</h3>
+        <span class="tl-org">Accenture · Pune</span>
+        <ul>
+          <li>Led a team of 7+ engineers, delivering automation of 1,000+ functional test cases for the client.</li>
+        </ul>
+      </div>
+      <div class="tl-item past reveal">
+        <div class="tl-node"></div>
+        <div class="tl-date">12/2014 <span>→</span> 05/2017 · 2 yrs 5 mos</div>
+        <h3 class="tl-role">Senior Quality Analyst</h3>
+        <span class="tl-org">Accenture · Pune</span>
+        <ul>
+          <li>Automated test scripts on the Siebel CRM application using Selenium WebDriver.</li>
+          <li>Automated Mediation Zone (MZ) workflows using Unix shell scripting.</li>
+        </ul>
+      </div>
+      <div class="tl-item past reveal">
+        <div class="tl-node"></div>
+        <div class="tl-date">08/2012 <span>→</span> 12/2014 · 2 yrs 4 mos</div>
+        <h3 class="tl-role">Quality Analyst</h3>
+        <span class="tl-org">Accenture · Pune</span>
+        <ul>
+          <li>Worked on E2E Telecom functional testing across Siebel CRM, Mediation Zone, E2E Finance, and billing systems.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section alt">
+  <div class="shell">
+    <span class="label">notable builds</span>
+    <div class="section-head">
+      <h2>Tools and frameworks I've built.</h2>
+      <p class="sub">Beyond test execution — accelerators and internal tools designed to change how a team works.</p>
+    </div>
+    <div class="expertise-grid reveal">
+      <div class="expertise-card" style="--cat:var(--teal)">
+        <h3>Honeycomb Reporting Tool</h3>
+        <ul>
+          <li>Custom RAG (Red-Amber-Green) execution analytics dashboard</li>
+          <li>Enables feature-level, risk-based testing prioritization</li>
+          <li>Reduced redundant test effort and improved defect detection</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--violet)">
+        <h3>Enterprise Selenium E2E Framework</h3>
+        <ul>
+          <li>Java + TestNG, AI-assisted design and setup</li>
+          <li>Page Object Model, reusable utility layers, data-driven (JSON/POJO)</li>
+          <li>Integrated with GitHub Actions, Extent Reports, and Jira</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--amber)">
+        <h3>Playwright Automation Framework</h3>
+        <ul>
+          <li>TypeScript, cross-browser (Chromium, Firefox, WebKit)</li>
+          <li>Parallel execution, centralized config, HTML reporting</li>
+          <li><a href="https://github.com/VIVEKSRM/Playwright_Java_Automation_Framework" target="_blank" rel="noopener" style="color:var(--teal);">View on GitHub ↗</a></li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--slate)">
+        <h3>Network Verification Testing (NVT) tool</h3>
+        <ul>
+          <li>Built during Philippines → India transition at Accenture</li>
+          <li>Automated NVT workflows using Selenium and shell scripting</li>
+          <li>Cut manual verification effort by ~70%</li>
+        </ul>
+      </div>
+      <div class="expertise-card" style="--cat:var(--coral)">
+        <h3>Automated PDF audit verification</h3>
+        <ul>
+          <li>Utility to validate compliance documents automatically</li>
+          <li>Eliminated 100% of manual audit validation effort</li>
+          <li>Strengthened compliance accuracy for financial workflows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="recognition" class="section alt">
+  <div class="shell">
+    <span class="label">recognition</span>
+    <div class="section-head">
+      <h2>Certifications, awards, and continuous learning.</h2>
+    </div>
+    <div class="recog-grid">
+      <div class="reveal">
+        <h3 style="font-size:1rem;margin-bottom:16px;">Certifications</h3>
+        <div class="cert-list">
+          <div class="cert-row"><span class="cert-name">Salesforce Certified Administrator</span><span class="cert-org">Salesforce</span></div>
+          <div class="cert-row"><span class="cert-name">Salesforce Certified AI Associate</span><span class="cert-org">Salesforce</span></div>
+          <div class="cert-row"><span class="cert-name">AWS Certified Solutions Architect – Associate</span><span class="cert-org">AWS</span></div>
+          <div class="cert-row"><span class="cert-name">Build with Gemini — Track 2: Platform IT Developer</span><span class="cert-org">Google Cloud · Sep 2026</span></div>
+          <div class="cert-row"><span class="cert-name">ISTQB Foundation Level</span><span class="cert-org">ISTQB</span></div>
+          <div class="cert-row"><span class="cert-name">Azure Fundamentals</span><span class="cert-org">Microsoft</span></div>
+          <div class="cert-row"><span class="cert-name">Automation Prime Certified</span><span class="cert-org">—</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1rem;margin-bottom:16px;">Awards</h3>
+        <ul class="award-list">
+          <li><span>ACE Award</span><span>Tech Mahindra · 2026</span></li>
+          <li><span>Bravo Award</span><span>Tech Mahindra · 2025</span></li>
+          <li><span>Standing Ovation Award</span><span>Tech Mahindra · 2023, 2024</span></li>
+          <li><span>Pat On The Back</span><span>Tech Mahindra · 2022, 2025</span></li>
+          <li><span>Automation Hackathon Winner</span><span>Accenture · 2021</span></li>
+          <li><span>Celebrate Excellence Award</span><span>Accenture · 2016, 2019</span></li>
+          <li><span>Stellar Award</span><span>Accenture · 2017</span></li>
+          <li><span>Best White Paper — CMT Testing</span><span>Accenture · 2015</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="gallery reveal" style="margin-top:44px;" aria-label="Awards, certificates and education gallery">
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/Standing_Ovation_Award_Professionalism.png" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/Standing_Ovation_Award_Professionalism.png" alt="Tech Mahindra Standing Ovation Award"><span class="cap">TechM Standing Ovation Award</span></a>
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/Accenture_InnovationAward.jpg" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/Accenture_InnovationAward.jpg" alt="Accenture Innovation Award"><span class="cap">Accenture Innovation Award</span></a>
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/Accenture_DiliveryAndProfitability.jpg" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/Accenture_DiliveryAndProfitability.jpg" alt="Accenture Delivery and Profitability Award"><span class="cap">Delivery & Profitability Award</span></a>
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/DRDO.jpg" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/DRDO.jpg" alt="DRDO Best Innovation Award"><span class="cap">DRDO Best Innovation Award</span></a>
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/IIM_C.jpg" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/IIM_C.jpg" alt="IIM Calcutta Executive MBA"><span class="cap">IIM Calcutta — Executive MBA</span></a>
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/IIMC_GroupPics.jpg" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/IIMC_GroupPics.jpg" alt="IIM Calcutta cohort photo"><span class="cap">IIM Calcutta cohort</span></a>
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/Degree_Certificate.jpg" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/Degree_Certificate.jpg" alt="Bachelor of Technology degree certificate"><span class="cap">B.Tech Degree</span></a>
+      <a class="gallery-item" href="https://vivekranjan.in/images/portfolio/CANSAT_Compition.jpg" target="_blank" rel="noopener"><img src="https://vivekranjan.in/images/portfolio/CANSAT_Compition.jpg" alt="CANSAT competition award"><span class="cap">CANSAT Competition Award</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <span class="label">what colleagues say</span>
+    <div class="section-head"><h2>A few words from people I've worked with.</h2></div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <p class="quote">"A very good manager to work with — strong technical expertise paired with the ability to resolve issues quickly. He creates a supportive, collaborative environment, removes blockers efficiently, and keeps the team motivated while staying current with new technologies."</p>
+        <p class="who"><b>Annu Gupta</b> — Tech Lead, Tech Mahindra (reported to Vivek)</p>
+      </div>
+      <div class="testi reveal">
+        <p class="quote">"Four years working under Vivek has been genuinely rewarding. He combines deep technical expertise with strong people management — breaking down complex problems, giving clear direction, and fostering a growth-oriented environment where people are encouraged to push their boundaries."</p>
+        <p class="who"><b>Meenu Gandash</b> — Tech Lead, 9+ years in Automation (reported to Vivek)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section alt">
+  <div class="shell">
+    <span class="label">education</span>
+    <div class="section-head"><h2>Formal grounding, applied leadership.</h2></div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <h3>Executive Programme for Young Managers</h3>
+        <span class="org">Indian Institute of Management, Calcutta</span>
+        <span class="yr">2016 – 2017 · Management</span>
+      </div>
+      <div class="edu-card reveal">
+        <h3>Bachelor of Technology</h3>
+        <span class="org">SRM University, Chennai</span>
+        <span class="yr">2008 – 2012 · Electronics & Instrumentation</span>
+      </div>
+    </div>
+    <div class="lang-row reveal">
+      <div><b>English</b><span style="color:var(--text-soft);font-size:0.88rem;">C2 · Professional</span></div>
+      <div><b>Hindi</b><span style="color:var(--text-soft);font-size:0.88rem;">C2 · Native</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="shell contact-grid">
+    <div>
+      <span class="label on-ink">get in touch</span>
+      <h2 style="margin-top:14px;">Let's talk about the problem you're trying to solve.</h2>
+      <p style="margin-top:18px;color:var(--on-ink-soft);max-width:46ch;">I'm looking for an AVP/VP-level Quality Engineering role where the mandate is bigger than "run more tests" — scaling a QE organization, building an AI-augmented automation strategy, or fixing a release-confidence problem before it becomes a business one. If that's what you're solving for, I'd like to hear about it.</p>
+    </div>
+    <div class="contact-links reveal">
+      <a href="mailto:vivek.ranjan.srm@gmail.com">vivek.ranjan.srm@gmail.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></a>
+      <a href="tel:+917507416993">+91 7507416993 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .7 3a2 2 0 01-.4 2.1L8.1 10a16 16 0 006 6l1.2-1.3a2 2 0 012.1-.4c1 .4 2 .6 3 .7a2 2 0 011.6 2z"/></svg></a>
+      <a href="https://www.linkedin.com/in/vivek-ranjan-profile/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <a href="https://github.com/VIVEKSRM" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <a href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download>Download résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></a>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer><div class="shell"><span>© <span id="year"></span> Vivek Ranjan</span><a href="#home">Back to top <i class="fa fa-arrow-up"></i></a></div></footer><script src="js/profile.js"></script>
-</body></html>
+
+<footer class="site">
+  <div class="shell footer-shell">
+    <span>© <span id="year"></span> vivek.ranjan — built with intent, not a template</span>
+    <a href="#top">back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // rotating hero status line
+  var cycleEl = document.getElementById('cycleText');
+  var cycleLines = [
+    'role: QE Transformation Leader',
+    'focus: AI-augmented test automation',
+    'domain: Telecom · Healthcare · Fintech',
+    'approach: risk-first, not coverage-first',
+    'status: open to AVP/VP conversations'
+  ];
+  if (cycleEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var cycleIdx = 0;
+    setInterval(function(){
+      cycleIdx = (cycleIdx + 1) % cycleLines.length;
+      cycleEl.style.opacity = 0;
+      setTimeout(function(){ cycleEl.textContent = cycleLines[cycleIdx]; cycleEl.style.opacity = 1; }, 220);
+    }, 2600);
+    cycleEl.style.transition = 'opacity 0.2s ease';
+  }
+
+  // mobile nav
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  function closeNav(){ mainNav.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+  function toggleNav(){
+    var open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  navToggle.addEventListener('click', function(e){ e.stopPropagation(); toggleNav(); });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeNav);
+  });
+  document.addEventListener('click', function(e){
+    if (mainNav.classList.contains('open') && !mainNav.contains(e.target) && e.target !== navToggle){ closeNav(); }
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeNav(); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 860) closeNav(); });
+
+  // scroll progress
+  var progress = document.getElementById('progress');
+  function updateProgress(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    progress.style.width = scrolled + '%';
+  }
+  document.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  // reveal on scroll
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduced) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:0.12});
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // scrollspy
+  var sections = ['about','approach','case-studies','expertise','experience','projects','recognition','contact'].map(function(id){ return document.getElementById(id); });
+  var navLinks = document.querySelectorAll('nav.links a[href^="#"]');
+  function onScrollSpy(){
+    var pos = window.scrollY + 140;
+    var current = null;
+    sections.forEach(function(sec){ if (sec && sec.offsetTop <= pos) current = sec.id; });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', current && a.getAttribute('href') === '#' + current);
+    });
+  }
+  document.addEventListener('scroll', onScrollSpy, {passive:true});
+  onScrollSpy();
+</script>
+</body>
+</html>

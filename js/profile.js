@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Mobile Navigation
     if (navToggle && nav) {
-        navToggle.addEventListener('click', () => {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', !isExpanded);
             navToggle.setAttribute('aria-label', !isExpanded ? 'Close menu' : 'Open menu');
@@ -50,6 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 navToggle.setAttribute('aria-label', 'Open menu');
             });
         });
+
+        // Close mobile nav when clicking anywhere outside
+        document.addEventListener('click', (e) => {
+            if (nav.classList.contains('open')) {
+                if (!nav.contains(e.target) && !navToggle.contains(e.target)) {
+                    nav.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navToggle.setAttribute('aria-label', 'Open menu');
+                }
+            }
+        });
     }
 
     // 5. Smooth Scroll
@@ -61,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const headerHeight = 72; // Account for sticky header offset
+                const headerHeight = header ? header.offsetHeight : 58;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
                 window.scrollTo({
                     top: targetPosition,
@@ -219,4 +231,68 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
         });
     }
+
+    // 11. Reading Progress Bar & Back-to-Top Button
+    const progressBar = document.getElementById('readingProgress');
+    const backToTopBtn = document.getElementById('backToTop');
+
+    const updateScrollProgress = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+
+        if (progressBar) {
+            progressBar.style.width = `${progress}%`;
+        }
+
+        if (backToTopBtn) {
+            if (scrollTop > 380) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+    };
+
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    updateScrollProgress();
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
+            });
+        });
+    }
+
+    // 12. Copy-to-Clipboard Toast
+    const copyToast = document.getElementById('copyToast');
+    const toastMsg = document.getElementById('toastMsg');
+    let toastTimeout = null;
+
+    const showToast = (text) => {
+        if (!copyToast) return;
+        if (toastMsg) toastMsg.textContent = text;
+        copyToast.classList.add('show');
+        if (toastTimeout) clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+            copyToast.classList.remove('show');
+        }, 2500);
+    };
+
+    document.querySelectorAll('.copy-btn, [data-copy]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const textToCopy = btn.getAttribute('data-copy');
+            if (textToCopy) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showToast(`Copied ${textToCopy} to clipboard!`);
+                }).catch(() => {
+                    showToast('Copied to clipboard!');
+                });
+            }
+        });
+    });
 });
+

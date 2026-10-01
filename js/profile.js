@@ -294,5 +294,86 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
 
+    // 13. Radial Progress Rings
+    const metricRings = document.querySelectorAll('.metric-ring-fill');
+    if (metricRings.length > 0) {
+        if (prefersReducedMotion) {
+            metricRings.forEach(ring => {
+                const percent = parseInt(ring.getAttribute('data-percent') || '0', 10);
+                ring.style.strokeDashoffset = 283 - (283 * percent / 100);
+            });
+        } else {
+            const ringObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const ring = entry.target;
+                        const percent = parseInt(ring.getAttribute('data-percent') || '0', 10);
+                        ring.style.strokeDashoffset = 283 - (283 * percent / 100);
+                        observer.unobserve(ring);
+                    }
+                });
+            }, { threshold: 0.1 });
+            metricRings.forEach(ring => ringObserver.observe(ring));
+        }
+    }
+
+    // 14. Interactive Career Timeline
+    const phasesContainer = document.querySelector('.phases');
+    const phaseCards = document.querySelectorAll('.phase-card');
+    if (phasesContainer && phaseCards.length > 0) {
+        if (prefersReducedMotion) {
+            phasesContainer.classList.add('timeline-active');
+            phaseCards.forEach(card => card.classList.add('phase-active'));
+        } else {
+            const timelineObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        phasesContainer.classList.add('timeline-active');
+                        phaseCards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.classList.add('phase-active');
+                            }, index * 400);
+                        });
+                        observer.unobserve(phasesContainer);
+                    }
+                });
+            }, { threshold: 0.2 });
+            timelineObserver.observe(phasesContainer);
+        }
+    }
+
+    // 15. Skill Filter Tabs
+    const techFilters = document.querySelector('.tech-filters');
+    const techGroups = document.querySelectorAll('.tech-group');
+    if (techFilters && techGroups.length > 0) {
+        techFilters.addEventListener('click', (e) => {
+            if (e.target.classList.contains('tech-filter-btn')) {
+                // Update active button
+                document.querySelectorAll('.tech-filter-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                const filter = e.target.getAttribute('data-filter');
+                
+                techGroups.forEach(group => {
+                    if (filter === 'all' || group.getAttribute('data-category') === filter) {
+                        group.classList.remove('filtered-out');
+                    } else {
+                        group.classList.add('filtered-out');
+                    }
+                });
+            }
+        });
+    }
+
+    // 16. Cursor Spotlight Effect on Dark Cards
+    if (!prefersReducedMotion) {
+        document.querySelectorAll('.dark-section .metric, .dark-section .tech-group').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+            });
+        });
+    }
+});

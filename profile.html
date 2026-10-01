@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Vivek Ranjan — Senior Quality Engineering & Automation Leader with 14+ years of experience in enterprise test automation, AI-driven quality engineering, and technical leadership across Telecom, Healthcare & Finance.">
   <title>Vivek Ranjan | Quality Engineering Leader</title>
+  <link rel="canonical" href="https://vivekranjan.in/profile.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vivek Ranjan | Quality Engineering Leader">
+  <meta property="og:description" content="Senior Quality Engineering & Automation Leader with 14+ years of experience in enterprise test automation, AI-driven quality engineering, and technical leadership.">
+  <meta property="og:image" content="https://vivekranjan.in/images/HomePagePic.png">
+  <meta property="og:url" content="https://vivekranjan.in/profile.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vivek Ranjan | Quality Engineering Leader">
+  <meta name="twitter:description" content="14+ years engineering confidence into every release. Automation architect, AI-driven QE leader.">
+  <meta name="twitter:image" content="https://vivekranjan.in/images/HomePagePic.png">
   <link rel="shortcut icon" href="images/TitleLogo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="font/css/font-awesome.min.css">
   <style>
 /* ═══════════════════════════════════════════════
@@ -38,6 +48,9 @@ img { max-width: 100%; display: block; }
 a { color: inherit; }
 h1, h2, h3, h4, p { margin-top: 0; }
 ul, ol { margin-top: 0; }
+/* Focus styles for keyboard navigation */
+*:focus-visible { outline: 2px solid var(--aqua); outline-offset: 3px; border-radius: 4px; }
+*:focus:not(:focus-visible) { outline: none; }
 .shell { width: min(var(--max), calc(100% - 40px)); margin: auto; }
 
 /* Skip link */
@@ -116,7 +129,7 @@ ul, ol { margin-top: 0; }
 .nav .nav-resume { margin-left: 5px; padding: 7px 12px; background: var(--night); color: #fff; border-radius: 6px; font-size: .78rem; font-weight: 800; }
 .nav .nav-resume:hover { background: var(--blue); }
 .nav-social { display: inline-flex; align-items: center; gap: 3px; margin-left: 4px; border-left: 1px solid var(--line); padding-left: 5px; }
-.nav-social a { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border-radius: 50%; color: #147aab; font-size: .88rem; }
+.nav-social a { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 50%; color: #147aab; font-size: .88rem; }
 .nav-social a:hover { color: #fff; background: #147aab; }
 .nav-toggle { display: none; border: 0; background: none; font-size: 1.35rem; cursor: pointer; color: var(--ink); }
 
@@ -150,15 +163,51 @@ h2 em, h1 em { font-family: Georgia, serif; font-weight: 400; color: var(--blue)
   background: radial-gradient(circle at 76% 18%, #2485b966, transparent 25%),
               radial-gradient(circle at 10% 80%, #4dd7ca30, transparent 27%),
               linear-gradient(135deg, #061322, #0f304d 62%, #0b425f);
+  background-size: 200% 200%;
+  animation: heroGradient 15s ease infinite;
+}
+@keyframes heroGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(1.5px 1.5px at 20px 30px, #4dd7ca, transparent),
+              radial-gradient(1.5px 1.5px at 40px 70px, #fff, transparent),
+              radial-gradient(1.5px 1.5px at 50px 160px, #2485b9, transparent),
+              radial-gradient(2px 2px at 90px 40px, #4dd7ca, transparent),
+              radial-gradient(2px 2px at 130px 80px, #fff, transparent),
+              radial-gradient(2px 2px at 160px 120px, #2485b9, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: particleDrift 30s linear infinite;
+  opacity: 0.35;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -200px; }
 }
 .hero::after {
-  content: ''; position: absolute; z-index: -1; inset: 0; opacity: .18;
+  content: ''; position: absolute; z-index: -2; inset: 0; opacity: .18;
   background-image: linear-gradient(#fff1 1px, transparent 1px), linear-gradient(90deg, #fff1 1px, transparent 1px);
   background-size: 54px 54px;
+  -webkit-mask-image: linear-gradient(to right, #000, transparent);
   mask-image: linear-gradient(to right, #000, transparent);
 }
 .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 64px; align-items: center; }
-.hero .eyebrow, .hero h1 em { color: #8ee6dc; }
+.hero .eyebrow { color: #8ee6dc; }
+.hero h1 em {
+  color: #8ee6dc;
+  background: linear-gradient(120deg, #8ee6dc 0%, #ffffff 50%, #4dd7ca 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 5s linear infinite;
+}
+@keyframes shimmerText {
+  to { background-position: 200% center; }
+}
 .hero h1 { color: #f7fcff; margin: 18px 0 27px; font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: .98; letter-spacing: -.065em; text-wrap: balance; }
 .hero-lead { max-width: 600px; color: #c6d8e5; font-size: 1.08rem; line-height: 1.6; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 31px 0; }
@@ -364,19 +413,20 @@ h2 em, h1 em { font-family: Georgia, serif; font-weight: 400; color: var(--blue)
   flex: 1; text-align: center; position: relative; padding: 0 8px; min-width: 140px;
 }
 .step-node {
-  width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%;
-  display: grid; place-items: center;
+  width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
   background: var(--mist); border: 2px solid var(--line);
-  font-size: 1.2rem; color: var(--muted);
-  transition: all .4s ease;
+  font-size: 1.15rem; color: var(--muted);
+  transition: all .4s ease; overflow: visible;
 }
+.step-node i { line-height: 1; vertical-align: middle; }
 .step.active .step-node {
   background: var(--aqua); border-color: var(--aqua); color: var(--night);
   box-shadow: 0 0 0 8px #83e4d833, 0 10px 25px #48d8cb44;
   transform: scale(1.1);
 }
 .step-connector {
-  position: absolute; top: 28px; left: calc(50% + 28px); right: calc(-50% + 28px);
+  position: absolute; top: 30px; left: calc(50% + 30px); right: calc(-50% + 30px);
   height: 2px; background: var(--line);
   z-index: -1;
 }
@@ -564,8 +614,84 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .hero, .hero::before, .hero h1 em, .phases.timeline-active::after { animation: none !important; }
+  .metric-ring-fill { transition: none !important; }
   .step-node, .phase-dot, .metric, .problem-card, .future-card, .testimonial-card { transition: none; }
   html { scroll-behavior: auto; }
+}
+
+/* ═══════════════════════════════════════════════
+   TIER 1 INTERACTIVE ENHANCEMENTS
+   ═══════════════════════════════════════════════ */
+
+/* Timeline traveling glow */
+.phases.timeline-active::after {
+  content: ''; position: absolute; top: 31px; left: 5%; width: 16px; height: 16px;
+  border-radius: 50%; background: var(--aqua);
+  box-shadow: 0 0 20px var(--aqua), 0 0 35px var(--aqua);
+  animation: timelineTravel 2.4s ease-out forwards;
+  z-index: 2; pointer-events: none;
+}
+@keyframes timelineTravel {
+  0% { left: 5%; opacity: 1; transform: scale(1); }
+  90% { opacity: 1; transform: scale(1.2); }
+  100% { left: 92%; opacity: 0; transform: scale(0.8); }
+}
+.phase-card.phase-active .phase-dot {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 6px var(--aqua), 0 0 25px rgba(77, 215, 202, 0.7);
+}
+
+/* Radial progress rings for percentage metrics */
+.metric-ring-wrap {
+  position: relative; width: 104px; height: 104px; margin: 0 auto 12px;
+}
+.metric-ring-wrap svg {
+  width: 100%; height: 100%; transform: rotate(-90deg);
+}
+.metric-ring-bg {
+  fill: none; stroke: rgba(255, 255, 255, 0.12); stroke-width: 6;
+}
+.metric-ring-fill {
+  fill: none; stroke: var(--aqua); stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 2s cubic-bezier(.16, 1, .3, 1);
+}
+.metric-ring-value {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 1.65rem; font-weight: 800; color: #fff; letter-spacing: -.04em;
+}
+.metric-ring-value span { font-weight: 800; }
+
+
+/* Cursor spotlight effect on dark cards */
+.dark-section .metric:hover,
+.dark-section .tech-group:hover {
+  background: radial-gradient(circle 180px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(131, 228, 216, 0.08), transparent) !important;
+}
+
+/* Skill filter tabs */
+.tech-filters {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  margin: 0 0 32px;
+}
+.tech-filter-btn {
+  padding: 8px 18px; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05); color: #c6d8e5; font-size: .8rem; font-weight: 700;
+  font-family: inherit; cursor: pointer; transition: all .25s ease;
+  min-height: 44px; display: inline-flex; align-items: center;
+}
+.tech-filter-btn:hover { border-color: var(--aqua); color: #fff; background: rgba(131, 228, 216, 0.12); }
+.tech-filter-btn.active {
+  background: var(--aqua); color: var(--night); border-color: var(--aqua);
+  box-shadow: 0 4px 16px rgba(77, 215, 202, 0.35);
+}
+.tech-group { transition: opacity .35s ease, transform .35s ease; }
+.tech-group.filtered-out {
+  opacity: 0; transform: scale(0.92); pointer-events: none;
+  display: none;
 }
 
 /* ═══════════════════════════════════════════════
@@ -584,13 +710,15 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   .nav {
     position: absolute; top: var(--header-h); left: 0; right: 0;
     display: none; flex-direction: column; align-items: stretch; gap: 0;
-    padding: 12px 24px 20px; background: var(--paper); border-bottom: 1px solid var(--line);
+    padding: 12px 24px 20px; background: var(--paper); max-height: calc(100vh - var(--header-h)); overflow-y: auto; border-bottom: 1px solid var(--line);
   }
   .nav.open { display: flex; }
-  .nav a { padding: 11px 0; }
+  .nav a { padding: 14px 0; min-height: 44px; display: flex; align-items: center; }
   .nav .nav-resume { margin: 6px 0 0; text-align: center; }
   .nav-social { margin: 8px 0 0; padding: 8px 0 0; border-left: 0; border-top: 1px solid var(--line); justify-content: flex-start; }
   .hero { padding: 58px 0; }
+  .actions { flex-direction: column; }
+  .actions .button { width: 100%; justify-content: center; }
   .hero-grid, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
   .hero-visual { justify-self: center; width: min(100%, 400px); }
   .photo { height: 420px; }
@@ -605,8 +733,35 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   .value-divider::before, .value-divider::after { width: 60px; height: 2px; background: linear-gradient(to right, transparent, var(--aqua), transparent); }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 510px) {
   .shell { width: min(var(--max), calc(100% - 24px)); }
+  /* Mobile: ensure text appears before photo */
+  .hero-grid { gap: 32px; }
+  .hero-grid > .reveal:first-child { order: -1; }
+  .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+  .hero-lead { font-size: .95rem; }
+  .actions .button { padding: 12px 16px; font-size: .84rem; width: 100%; justify-content: center; }
+  /* Skill filter tabs: horizontal scroll on mobile */
+  .tech-filters { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 6px; padding-bottom: 8px; justify-content: flex-start; scrollbar-width: none; }
+  .tech-filters::-webkit-scrollbar { display: none; }
+  .tech-filter-btn { white-space: nowrap; flex-shrink: 0; padding: 6px 14px; font-size: .72rem; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 14px; }
+  .awards-split { grid-template-columns: 1fr; gap: 24px; }
+  .award-gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .research-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Shimmer: simplify on mobile for battery */
+  .hero h1 em { animation-duration: 8s; }
+  .reading-progress { height: 3px; }
+  .section { padding: 50px 0; }
+  .dark-section { padding: 50px 0; }
+  .metric-ring-wrap { width: 88px; height: 88px; }
+  .metric-ring-value { font-size: 1.35rem; }
+  .pipeline { gap: 14px; padding: 10px; }
+  .step { min-width: 100px; }
+  .step-node { width: 50px; height: 50px; font-size: 1rem; }
+  .step h4 { font-size: .8rem; }
+  .step p { font-size: .72rem; }
   .header-left { gap: 8px; }
   .brand-name { font-size: .95rem; }
   .brand-tag { display: none; }
@@ -622,6 +777,19 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   .dark-section { margin: 0 8px; border-radius: 22px; }
   .ai-flow { flex-wrap: wrap; gap: 8px; padding: 20px 14px; }
   .ai-flow-arrow { display: none; }
+}
+
+@media (max-width: 360px) {
+  .hero h1 { font-size: 1.8rem; }
+  .stats { gap: 12px; }
+  .stats dt { font-size: 1.3rem; }
+  .hpc-tags { gap: 4px; }
+  .hpc-tag { font-size: .65rem; padding: 3px 7px; }
+  .heading h2 { font-size: 1.3rem; }
+  .eyebrow { font-size: .65rem; }
+  .metric h3 { font-size: 1.8rem; }
+  .metric-ring-wrap { width: 76px; height: 76px; }
+  .metric-ring-value { font-size: 1.15rem; }
 }
 
 /* ═══════════════════════════════════════════════
@@ -807,6 +975,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   </style>
 </head>
 <body>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;transition:none!important;}[data-count]{}</style></noscript>
 <div id="readingProgress" class="reading-progress"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -831,7 +1000,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
       </a>
     </div>
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false">
-      <i class="fa fa-bars"></i>
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
     <nav id="mainNav" class="nav" aria-label="Primary navigation">
       <a href="#evolution">Journey</a>
@@ -842,10 +1011,10 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
       <a href="#recognition">Awards</a>
       <a href="#contact">Connect</a>
       <span class="nav-social" aria-label="Social links">
-        <a href="https://www.linkedin.com/in/vivek-ranjan-profile/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/VIVEKSRM" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vivek-ranjan-profile/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/VIVEKSRM" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
       </span>
-      <a class="nav-resume" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download>Resume <i class="fa fa-download"></i></a>
+      <a class="nav-resume" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download>Resume <i class="fa fa-download" aria-hidden="true"></i></a>
     </nav>
   </div>
 </header>
@@ -855,15 +1024,15 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      1. HERO — PROFESSIONAL IDENTITY
      ═══════════════════════════════════════════════ -->
-<section id="home" class="hero">
+<section id="home" class="hero" aria-label="Hero - Professional Identity">
   <div class="shell hero-grid">
     <div class="reveal">
       <p class="eyebrow"><span></span>Available for quality engineering leadership</p>
       <h1>Engineering <em>confidence</em><br>into every release.</h1>
       <p class="hero-lead">I'm Vivek Ranjan — a Quality Engineering Leader who architects scalable, AI-enabled test automation for complex enterprise systems. Over 14 years, I've transformed testing from a bottleneck into a strategic engineering advantage across Telecom, Healthcare, and Finance.</p>
       <div class="actions">
-        <a class="button primary" href="#evolution">Explore my journey <i class="fa fa-arrow-right"></i></a>
-        <a class="button secondary" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download><i class="fa fa-download"></i> Download Resume</a>
+        <a class="button primary" href="#evolution">Explore my journey <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="button secondary" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a>
       </div>
       <dl class="stats">
         <div><dt data-count="14" data-suffix="+">0</dt><dd>years in QA</dd></div>
@@ -875,7 +1044,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
     <div class="hero-visual reveal">
       <div class="photo-frame">
         <div class="photo">
-          <img src="images/HomePagePic.png" alt="Portrait of Vivek Ranjan — Quality Engineering Leader">
+          <img src="images/HomePagePic.png" fetchpriority="high" alt="Portrait of Vivek Ranjan — Quality Engineering Leader">
           <div class="photo-ambient"></div>
         </div>
       </div>
@@ -891,11 +1060,11 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <h2 class="hpc-role">Automation Architect &amp; QE Leader</h2>
         <p class="hpc-desc">Architecting scalable test ecosystems &amp; AI-driven quality engineering across Telecom, Healthcare &amp; Fintech.</p>
         <div class="hpc-tags">
-          <a class="hpc-tag" href="#skills" title="View Automation Frameworks"><i class="fa fa-code"></i> Selenium</a>
-          <a class="hpc-tag" href="#skills" title="View Playwright Modernization"><i class="fa fa-play-circle"></i> Playwright</a>
-          <a class="hpc-tag" href="#skills" title="View API Automation"><i class="fa fa-exchange"></i> REST API</a>
-          <a class="hpc-tag" href="#skills" title="View CI/CD Pipelines"><i class="fa fa-cogs"></i> CI/CD</a>
-          <a class="hpc-tag" href="#ai-future" title="View AI & GenAI Quality Strategy"><i class="fa fa-magic"></i> GenAI</a>
+          <a class="hpc-tag" href="#skills" title="View Automation Frameworks"><i class="fa fa-code" aria-hidden="true"></i> Selenium</a>
+          <a class="hpc-tag" href="#skills" title="View Playwright Modernization"><i class="fa fa-play-circle" aria-hidden="true"></i> Playwright</a>
+          <a class="hpc-tag" href="#skills" title="View API Automation"><i class="fa fa-exchange" aria-hidden="true"></i> REST API</a>
+          <a class="hpc-tag" href="#skills" title="View CI/CD Pipelines"><i class="fa fa-cogs" aria-hidden="true"></i> CI/CD</a>
+          <a class="hpc-tag" href="#ai-future" title="View AI & GenAI Quality Strategy"><i class="fa fa-magic" aria-hidden="true"></i> GenAI</a>
         </div>
       </div>
     </div>
@@ -905,7 +1074,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      2. CAREER EVOLUTION
      ═══════════════════════════════════════════════ -->
-<section id="evolution" class="section">
+<section id="evolution" class="section" aria-label="Career Evolution">
   <div class="shell">
     <div class="evo-intro reveal">
       <p class="eyebrow"><span></span>01 / Career evolution</p>
@@ -964,7 +1133,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      3. PROBLEMS I HAVE SOLVED
      ═══════════════════════════════════════════════ -->
-<section id="problems" class="section soft">
+<section id="problems" class="section soft" aria-label="Problems Solved">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">02 / Engineering stories</p>
@@ -980,7 +1149,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <div class="problem-meta">
           <span>UNIX Shell</span><span>Oracle BRM</span><span>Mediation Zone</span>
         </div>
-        <div class="problem-outcome"><i class="fa fa-check-circle"></i> Automated 80% of MZ flows — significant cost savings for the client</div>
+        <div class="problem-outcome"><i class="fa fa-check-circle" aria-hidden="true"></i> Automated 80% of MZ flows — significant cost savings for the client</div>
       </div>
 
       <div class="problem-card reveal" data-delay="0.08s">
@@ -990,7 +1159,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <div class="problem-meta">
           <span>TestNG</span><span>Selenium</span><span>JBehave → TestNG</span>
         </div>
-        <div class="problem-outcome"><i class="fa fa-check-circle"></i> Migrated 2,000+ tests — 30% execution time reduction</div>
+        <div class="problem-outcome"><i class="fa fa-check-circle" aria-hidden="true"></i> Migrated 2,000+ tests — 30% execution time reduction</div>
       </div>
 
       <div class="problem-card reveal" data-delay="0.16s">
@@ -1000,7 +1169,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <div class="problem-meta">
           <span>Selenium</span><span>Salesforce</span><span>Applitools</span><span>LambdaTest</span>
         </div>
-        <div class="problem-outcome"><i class="fa fa-check-circle"></i> 1,000+ test cases automated — 40% regression cycle reduction</div>
+        <div class="problem-outcome"><i class="fa fa-check-circle" aria-hidden="true"></i> 1,000+ test cases automated — 40% regression cycle reduction</div>
       </div>
 
       <div class="problem-card reveal" data-delay="0s">
@@ -1010,7 +1179,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <div class="problem-meta">
           <span>Healium</span><span>Selenium</span><span>Self-healing</span>
         </div>
-        <div class="problem-outcome"><i class="fa fa-check-circle"></i> Self-healing framework — reduced flaky failures and maintenance overhead</div>
+        <div class="problem-outcome"><i class="fa fa-check-circle" aria-hidden="true"></i> Self-healing framework — reduced flaky failures and maintenance overhead</div>
       </div>
 
       <div class="problem-card reveal" data-delay="0.08s">
@@ -1020,7 +1189,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <div class="problem-meta">
           <span>GitHub Actions</span><span>Docker</span><span>CI/CD</span>
         </div>
-        <div class="problem-outcome"><i class="fa fa-check-circle"></i> ~60% execution time reduction — faster feedback loops</div>
+        <div class="problem-outcome"><i class="fa fa-check-circle" aria-hidden="true"></i> ~60% execution time reduction — faster feedback loops</div>
       </div>
 
       <div class="problem-card reveal" data-delay="0.16s">
@@ -1030,7 +1199,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <div class="problem-meta">
           <span>Java</span><span>Custom Utility</span><span>Automation</span>
         </div>
-        <div class="problem-outcome"><i class="fa fa-check-circle"></i> 100% manual effort eliminated — automated verification utility</div>
+        <div class="problem-outcome"><i class="fa fa-check-circle" aria-hidden="true"></i> 100% manual effort eliminated — automated verification utility</div>
       </div>
 
     </div>
@@ -1040,7 +1209,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      4. ENGINEERING IMPACT
      ═══════════════════════════════════════════════ -->
-<section id="impact" class="section dark-section impact-section" style="position:relative;overflow:hidden;">
+<section id="impact" class="section dark-section impact-section" aria-label="Engineering Impact" style="position:relative;overflow:hidden;">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">03 / Measurable impact</p>
@@ -1049,42 +1218,56 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 
     <div class="metrics-grid">
       <div class="metric reveal" data-delay="0s">
-        <i class="fa fa-calendar"></i>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
         <h3 data-count="14" data-suffix="+">0</h3>
         <p>Years in quality engineering</p>
       </div>
       <div class="metric reveal" data-delay="0.06s">
-        <i class="fa fa-code"></i>
+        <i class="fa fa-code" aria-hidden="true"></i>
         <h3 data-count="3000" data-suffix="+">0</h3>
         <p>Test cases automated</p>
       </div>
       <div class="metric reveal" data-delay="0.12s">
-        <i class="fa fa-rocket"></i>
+        <i class="fa fa-rocket" aria-hidden="true"></i>
         <h3 data-count="40" data-suffix="+">0</h3>
         <p>Enterprise releases delivered</p>
       </div>
       <div class="metric reveal" data-delay="0.18s">
-        <i class="fa fa-users"></i>
+        <i class="fa fa-users" aria-hidden="true"></i>
         <h3 data-count="18" data-suffix="">0</h3>
         <p>Engineers led &amp; mentored</p>
       </div>
       <div class="metric reveal" data-delay="0s">
-        <i class="fa fa-bolt"></i>
-        <h3 data-count="60" data-suffix="%" data-prefix="~">0</h3>
+        <div class="metric-ring-wrap">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="metric-ring-bg" cx="50" cy="50" r="45"/>
+            <circle class="metric-ring-fill" cx="50" cy="50" r="45" data-percent="60"/>
+          </svg>
+          <div class="metric-ring-value">
+            <span data-count="60" data-suffix="%" data-prefix="~">0</span>
+          </div>
+        </div>
         <p>Pipeline execution reduction</p>
       </div>
       <div class="metric reveal" data-delay="0.06s">
-        <i class="fa fa-tachometer"></i>
-        <h3 data-count="40" data-suffix="%">0</h3>
+        <div class="metric-ring-wrap">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="metric-ring-bg" cx="50" cy="50" r="45"/>
+            <circle class="metric-ring-fill" cx="50" cy="50" r="45" data-percent="40"/>
+          </svg>
+          <div class="metric-ring-value">
+            <span data-count="40" data-suffix="%">0</span>
+          </div>
+        </div>
         <p>Regression cycle reduction</p>
       </div>
       <div class="metric reveal" data-delay="0.12s">
-        <i class="fa fa-trophy"></i>
+        <i class="fa fa-trophy" aria-hidden="true"></i>
         <h3 data-count="14" data-suffix="">0</h3>
         <p>Professional awards</p>
       </div>
       <div class="metric reveal" data-delay="0.18s">
-        <i class="fa fa-certificate"></i>
+        <i class="fa fa-certificate" aria-hidden="true"></i>
         <h3 data-count="9" data-suffix="">0</h3>
         <p>Industry certifications</p>
       </div>
@@ -1095,7 +1278,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      5. ENGINEERING APPROACH
      ═══════════════════════════════════════════════ -->
-<section id="approach" class="section">
+<section id="approach" class="section" aria-label="Engineering Approach">
   <div class="shell">
     <div class="approach-intro reveal">
       <p class="eyebrow"><span></span>04 / How I think</p>
@@ -1105,43 +1288,43 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 
     <div class="pipeline reveal">
       <div class="step">
-        <div class="step-node"><i class="fa fa-search"></i></div>
+        <div class="step-node"><i class="fa fa-search" aria-hidden="true"></i></div>
         <div class="step-connector"></div>
         <h4>Understand</h4>
         <p>Deep-dive into business requirements and system architecture</p>
       </div>
       <div class="step">
-        <div class="step-node"><i class="fa fa-compress"></i></div>
+        <div class="step-node"><i class="fa fa-compress" aria-hidden="true"></i></div>
         <div class="step-connector"></div>
         <h4>Simplify</h4>
         <p>Break complexity into testable, automatable components</p>
       </div>
       <div class="step">
-        <div class="step-node"><i class="fa fa-sitemap"></i></div>
+        <div class="step-node"><i class="fa fa-sitemap" aria-hidden="true"></i></div>
         <div class="step-connector"></div>
         <h4>Architect</h4>
         <p>Design maintainable frameworks with reusable patterns</p>
       </div>
       <div class="step">
-        <div class="step-node"><i class="fa fa-cogs"></i></div>
+        <div class="step-node"><i class="fa fa-cogs" aria-hidden="true"></i></div>
         <div class="step-connector"></div>
         <h4>Automate</h4>
         <p>Build robust scripts integrated with CI/CD pipelines</p>
       </div>
       <div class="step">
-        <div class="step-node"><i class="fa fa-code-fork"></i></div>
+        <div class="step-node"><i class="fa fa-code-fork" aria-hidden="true"></i></div>
         <div class="step-connector"></div>
         <h4>Integrate</h4>
         <p>Embed quality into every stage of the delivery lifecycle</p>
       </div>
       <div class="step">
-        <div class="step-node"><i class="fa fa-bar-chart"></i></div>
+        <div class="step-node"><i class="fa fa-bar-chart-o" aria-hidden="true"></i></div>
         <div class="step-connector"></div>
         <h4>Measure</h4>
         <p>Data-driven decisions with clear quality metrics</p>
       </div>
       <div class="step">
-        <div class="step-node"><i class="fa fa-refresh"></i></div>
+        <div class="step-node"><i class="fa fa-refresh" aria-hidden="true"></i></div>
         <h4>Improve</h4>
         <p>Continuous feedback loops and optimization</p>
       </div>
@@ -1157,17 +1340,27 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      6. TECHNOLOGY CAPABILITY
      ═══════════════════════════════════════════════ -->
-<section id="skills" class="section dark-section">
+<section id="skills" class="section dark-section" aria-label="Technology & Skills">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">05 / Technology</p>
       <h2>Tools I use to solve problems.</h2>
     </div>
 
+    <div class="tech-filters reveal">
+      <button class="tech-filter-btn active" data-filter="all">All</button>
+      <button class="tech-filter-btn" data-filter="quality">Quality Engineering</button>
+      <button class="tech-filter-btn" data-filter="programming">Programming</button>
+      <button class="tech-filter-btn" data-filter="devops">CI/CD &amp; DevOps</button>
+      <button class="tech-filter-btn" data-filter="cloud">Cloud</button>
+      <button class="tech-filter-btn" data-filter="enterprise">Enterprise</button>
+      <button class="tech-filter-btn" data-filter="ai">AI &amp; Emerging</button>
+    </div>
+
     <div class="tech-groups">
 
-      <div class="tech-group reveal" data-delay="0s">
-        <div class="tech-group-icon"><i class="fa fa-flask"></i></div>
+      <div class="tech-group reveal" data-delay="0s" data-category="quality">
+        <div class="tech-group-icon"><i class="fa fa-flask" aria-hidden="true"></i></div>
         <h3>Quality Engineering</h3>
         <p>End-to-end test automation across UI, API, mobile, and integration layers</p>
         <div class="tech-tags">
@@ -1184,8 +1377,8 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         </div>
       </div>
 
-      <div class="tech-group reveal" data-delay="0.08s">
-        <div class="tech-group-icon"><i class="fa fa-terminal"></i></div>
+      <div class="tech-group reveal" data-delay="0.08s" data-category="programming">
+        <div class="tech-group-icon"><i class="fa fa-terminal" aria-hidden="true"></i></div>
         <h3>Programming</h3>
         <p>Languages and paradigms used to build frameworks and tooling</p>
         <div class="tech-tags">
@@ -1198,8 +1391,8 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         </div>
       </div>
 
-      <div class="tech-group reveal" data-delay="0.16s">
-        <div class="tech-group-icon"><i class="fa fa-code-fork"></i></div>
+      <div class="tech-group reveal" data-delay="0.16s" data-category="devops">
+        <div class="tech-group-icon"><i class="fa fa-code-fork" aria-hidden="true"></i></div>
         <h3>CI/CD &amp; DevOps</h3>
         <p>Continuous integration, container orchestration, and pipeline engineering</p>
         <div class="tech-tags">
@@ -1214,8 +1407,8 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         </div>
       </div>
 
-      <div class="tech-group reveal" data-delay="0s">
-        <div class="tech-group-icon"><i class="fa fa-cloud"></i></div>
+      <div class="tech-group reveal" data-delay="0s" data-category="cloud">
+        <div class="tech-group-icon"><i class="fa fa-cloud" aria-hidden="true"></i></div>
         <h3>Cloud &amp; Infrastructure</h3>
         <p>Cloud platforms and infrastructure management for scalable test execution</p>
         <div class="tech-tags">
@@ -1226,8 +1419,8 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         </div>
       </div>
 
-      <div class="tech-group reveal" data-delay="0.08s">
-        <div class="tech-group-icon"><i class="fa fa-building-o"></i></div>
+      <div class="tech-group reveal" data-delay="0.08s" data-category="enterprise">
+        <div class="tech-group-icon"><i class="fa fa-building-o" aria-hidden="true"></i></div>
         <h3>Enterprise Platforms</h3>
         <p>Deep domain experience in CRM, billing, and project management systems</p>
         <div class="tech-tags">
@@ -1240,8 +1433,8 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         </div>
       </div>
 
-      <div class="tech-group reveal" data-delay="0.16s">
-        <div class="tech-group-icon"><i class="fa fa-magic"></i></div>
+      <div class="tech-group reveal" data-delay="0.16s" data-category="ai">
+        <div class="tech-group-icon"><i class="fa fa-magic" aria-hidden="true"></i></div>
         <h3>AI &amp; Emerging</h3>
         <p>AI-assisted development and next-generation test intelligence</p>
         <div class="tech-tags">
@@ -1261,7 +1454,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      7. AI & FUTURE OF QUALITY ENGINEERING
      ═══════════════════════════════════════════════ -->
-<section id="ai-future" class="section">
+<section id="ai-future" class="section" aria-label="AI and Future Vision">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">06 / AI &amp; the future</p>
@@ -1270,7 +1463,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 
     <div class="ai-split">
       <div class="ai-col reveal">
-        <h3><i class="fa fa-check-circle"></i> What I've built with AI</h3>
+        <h3><i class="fa fa-check-circle" aria-hidden="true"></i> What I've built with AI</h3>
         <ul class="ai-items">
           <li>
             <span class="ai-badge built">Implemented</span>
@@ -1296,7 +1489,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
       </div>
 
       <div class="ai-col reveal" data-delay="0.1s">
-        <h3><i class="fa fa-compass"></i> Where I'm heading</h3>
+        <h3><i class="fa fa-compass" aria-hidden="true"></i> Where I'm heading</h3>
         <ul class="ai-items">
           <li>
             <span class="ai-badge exploring">Exploring</span>
@@ -1325,37 +1518,37 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
     <!-- AI Quality Lifecycle Flow -->
     <div class="ai-flow reveal">
       <div class="ai-flow-node">
-        <div class="ai-flow-icon"><i class="fa fa-file-text-o"></i></div>
+        <div class="ai-flow-icon"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
         <span>Requirement</span>
       </div>
-      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right"></i></div>
+      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
       <div class="ai-flow-node">
-        <div class="ai-flow-icon"><i class="fa fa-magic"></i></div>
+        <div class="ai-flow-icon"><i class="fa fa-magic" aria-hidden="true"></i></div>
         <span>AI Test Design</span>
       </div>
-      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right"></i></div>
+      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
       <div class="ai-flow-node">
-        <div class="ai-flow-icon"><i class="fa fa-cogs"></i></div>
+        <div class="ai-flow-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
         <span>Automation</span>
       </div>
-      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right"></i></div>
+      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
       <div class="ai-flow-node">
-        <div class="ai-flow-icon"><i class="fa fa-play-circle"></i></div>
+        <div class="ai-flow-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
         <span>Execution</span>
       </div>
-      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right"></i></div>
+      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
       <div class="ai-flow-node">
-        <div class="ai-flow-icon"><i class="fa fa-bar-chart-o"></i></div>
+        <div class="ai-flow-icon"><i class="fa fa-bar-chart-o" aria-hidden="true"></i></div>
         <span>AI Analysis</span>
       </div>
-      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right"></i></div>
+      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
       <div class="ai-flow-node">
-        <div class="ai-flow-icon"><i class="fa fa-bug"></i></div>
+        <div class="ai-flow-icon"><i class="fa fa-bug" aria-hidden="true"></i></div>
         <span>Defect Intel</span>
       </div>
-      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right"></i></div>
+      <div class="ai-flow-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
       <div class="ai-flow-node">
-        <div class="ai-flow-icon"><i class="fa fa-refresh"></i></div>
+        <div class="ai-flow-icon"><i class="fa fa-refresh" aria-hidden="true"></i></div>
         <span>Feedback</span>
       </div>
     </div>
@@ -1365,7 +1558,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      8. WHAT I CAN BUILD NEXT
      ═══════════════════════════════════════════════ -->
-<section id="build-next" class="section soft">
+<section id="build-next" class="section soft" aria-label="What I Can Build Next">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">07 / Forward vision</p>
@@ -1375,45 +1568,45 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
     <div class="future-grid">
 
       <div class="future-card reveal" data-delay="0s">
-        <i class="fa fa-cogs"></i>
+        <i class="fa fa-cogs" aria-hidden="true"></i>
         <h3>Enterprise Automation Platforms</h3>
         <p>Scalable, resilient test infrastructure that supports elastic execution, self-healing, and cloud-native deployment.</p>
-        <div class="evidence"><i class="fa fa-check"></i> Built on 3,000+ automated tests across 6+ enterprise projects</div>
+        <div class="evidence"><i class="fa fa-check" aria-hidden="true"></i> Built on 3,000+ automated tests across 6+ enterprise projects</div>
       </div>
 
       <div class="future-card reveal" data-delay="0.08s">
-        <i class="fa fa-magic"></i>
+        <i class="fa fa-magic" aria-hidden="true"></i>
         <h3>AI-Driven Quality Engineering</h3>
         <p>Intelligent test generation, smart regression selection, and AI-assisted debugging for faster, smarter testing.</p>
-        <div class="evidence"><i class="fa fa-check"></i> Active Playwright MCP and GenAI implementation experience</div>
+        <div class="evidence"><i class="fa fa-check" aria-hidden="true"></i> Active Playwright MCP and GenAI implementation experience</div>
       </div>
 
       <div class="future-card reveal" data-delay="0.16s">
-        <i class="fa fa-shield"></i>
+        <i class="fa fa-shield" aria-hidden="true"></i>
         <h3>CI/CD Quality Gates</h3>
         <p>Embedding automated quality checkpoints into delivery pipelines for continuous validation and release confidence.</p>
-        <div class="evidence"><i class="fa fa-check"></i> Achieved ~60% pipeline execution reduction with GitHub Actions</div>
+        <div class="evidence"><i class="fa fa-check" aria-hidden="true"></i> Achieved ~60% pipeline execution reduction with GitHub Actions</div>
       </div>
 
       <div class="future-card reveal" data-delay="0s">
-        <i class="fa fa-exchange"></i>
+        <i class="fa fa-exchange" aria-hidden="true"></i>
         <h3>Test Architecture Modernization</h3>
         <p>Migrating legacy test assets to modern frameworks — improving stability, speed, and maintainability.</p>
-        <div class="evidence"><i class="fa fa-check"></i> Led 2,000+ test migration from JBehave to TestNG</div>
+        <div class="evidence"><i class="fa fa-check" aria-hidden="true"></i> Led 2,000+ test migration from JBehave to TestNG</div>
       </div>
 
       <div class="future-card reveal" data-delay="0.08s">
-        <i class="fa fa-bar-chart-o"></i>
+        <i class="fa fa-bar-chart-o" aria-hidden="true"></i>
         <h3>Engineering Productivity</h3>
         <p>Custom tools and utilities that multiply team output — from test data generation to execution visualization.</p>
-        <div class="evidence"><i class="fa fa-check"></i> Created 10+ tools including Honeycomb, NVT, Meta Data Tool</div>
+        <div class="evidence"><i class="fa fa-check" aria-hidden="true"></i> Created 10+ tools including Honeycomb, NVT, Meta Data Tool</div>
       </div>
 
       <div class="future-card reveal" data-delay="0.16s">
-        <i class="fa fa-compass"></i>
+        <i class="fa fa-compass" aria-hidden="true"></i>
         <h3>Quality Transformation</h3>
         <p>End-to-end quality strategy that shifts testing left, embeds automation early, and creates measurable business value.</p>
-        <div class="evidence"><i class="fa fa-check"></i> 40% regression cycle reduction, 25% defect leakage reduction</div>
+        <div class="evidence"><i class="fa fa-check" aria-hidden="true"></i> 40% regression cycle reduction, 25% defect leakage reduction</div>
       </div>
 
     </div>
@@ -1423,7 +1616,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      9. TESTIMONIALS
      ═══════════════════════════════════════════════ -->
-<section id="testimonials" class="section">
+<section id="testimonials" class="section" aria-label="Testimonials">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">08 / What colleagues say</p>
@@ -1505,7 +1698,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      10. RECOGNITION & AWARDS
      ═══════════════════════════════════════════════ -->
-<section id="recognition" class="section soft">
+<section id="recognition" class="section soft" aria-label="Awards and Certifications">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">09 / Recognition</p>
@@ -1515,7 +1708,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
     <div class="awards-split">
       <!-- Awards Timeline -->
       <div class="awards-col reveal">
-        <h3><i class="fa fa-trophy"></i> Awards &amp; Honours</h3>
+        <h3><i class="fa fa-trophy" aria-hidden="true"></i> Awards &amp; Honours</h3>
         <ul class="award-timeline">
           <li><span class="yr">2026</span><strong>ACE Award — Tech Mahindra</strong>Third ACE Award across career; third recognition in 2025–26</li>
           <li><span class="yr">2025</span><strong>Best Team Player — Tech Mahindra</strong>Recognised for cross-team collaboration and mentoring</li>
@@ -1536,7 +1729,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 
       <!-- Award Images Gallery -->
       <div class="awards-col reveal" data-delay="0.1s">
-        <h3><i class="fa fa-picture-o"></i> Award Gallery</h3>
+        <h3><i class="fa fa-picture-o" aria-hidden="true"></i> Award Gallery</h3>
         <div class="award-gallery">
           <div class="award-img" data-lightbox="images/portfolio/All Certificates/ACE_Awards_TechM_2026.png" data-caption="ACE Award — Tech Mahindra 2026">
             <img src="images/portfolio/All Certificates/ACE_Awards_TechM_2026.png" alt="ACE Award Tech Mahindra 2026" loading="lazy">
@@ -1594,31 +1787,31 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
           <div class="cert-year">2026</div>
           <strong>Build with Gemini — Platform IT Developer</strong>
           <span>Google Cloud</span>
-          <a class="cert-link" href="images/portfolio/All Certificates/Certificates_Cloud_Gemini.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o"></i> View Certificate</a>
+          <a class="cert-link" href="images/portfolio/All Certificates/Certificates_Cloud_Gemini.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Certificate</a>
         </div>
         <div class="cert-card">
           <div class="cert-year">2026</div>
           <strong>Pat on the Back Award</strong>
           <span>Tech Mahindra</span>
-          <a class="cert-link" href="images/portfolio/All Certificates/Pat_On_Back_Award_2026.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o"></i> View Award</a>
+          <a class="cert-link" href="images/portfolio/All Certificates/Pat_On_Back_Award_2026.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Award</a>
         </div>
         <div class="cert-card">
           <div class="cert-year">2024</div>
           <strong>Salesforce AI Associate</strong>
           <span>Salesforce</span>
-          <a class="cert-link" href="images/portfolio/All Certificates/Cert4706599_AIAssociate_20240725_SF_AI.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o"></i> View Certificate</a>
+          <a class="cert-link" href="images/portfolio/All Certificates/Cert4706599_AIAssociate_20240725_SF_AI.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Certificate</a>
         </div>
         <div class="cert-card">
           <div class="cert-year">2024</div>
           <strong>Salesforce Certified Administrator</strong>
           <span>Salesforce</span>
-          <a class="cert-link" href="images/portfolio/All Certificates/Cert4808089_Administrator_20240830_SF_Admin.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o"></i> View Certificate</a>
+          <a class="cert-link" href="images/portfolio/All Certificates/Cert4808089_Administrator_20240830_SF_Admin.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Certificate</a>
         </div>
         <div class="cert-card">
           <div class="cert-year">2024</div>
           <strong>Bravo Award</strong>
           <span>Tech Mahindra</span>
-          <a class="cert-link" href="images/portfolio/All Certificates/Bravo_Award_2024.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o"></i> View Award</a>
+          <a class="cert-link" href="images/portfolio/All Certificates/Bravo_Award_2024.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Award</a>
         </div>
         <div class="cert-card">
           <div class="cert-year">2021</div>
@@ -1629,7 +1822,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
           <div class="cert-year">2020</div>
           <strong>AWS Solutions Architect — Associate</strong>
           <span>Amazon Web Services</span>
-          <a class="cert-link" href="images/portfolio/All Certificates/Certificates_Cloud.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o"></i> View Cloud Certs</a>
+          <a class="cert-link" href="images/portfolio/All Certificates/Certificates_Cloud.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Cloud Certs</a>
         </div>
         <div class="cert-card">
           <div class="cert-year">2020</div>
@@ -1664,7 +1857,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      11. EDUCATION & RESEARCH
      ═══════════════════════════════════════════════ -->
-<section id="education" class="section dark-section">
+<section id="education" class="section dark-section" aria-label="Education and Research">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">10 / Education &amp; research</p>
@@ -1704,37 +1897,37 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
           <div class="research-card-img-wrap">
             <img src="images/portfolio/DRDO_Paper_Clip.jpg" alt="DRDO Research Paper" loading="lazy">
           </div>
-          <div class="research-caption"><span>DRDO Research Paper</span><i class="fa fa-search-plus"></i></div>
+          <div class="research-caption"><span>DRDO Research Paper</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="research-card" data-lightbox="images/portfolio/DRDO_Paper_Clip_College.jpg" data-caption="DRDO Paper — College Presentation">
           <div class="research-card-img-wrap">
             <img src="images/portfolio/DRDO_Paper_Clip_College.jpg" alt="DRDO Paper College Presentation" loading="lazy">
           </div>
-          <div class="research-caption"><span>DRDO — College Presentation</span><i class="fa fa-search-plus"></i></div>
+          <div class="research-caption"><span>DRDO — College Presentation</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="research-card" data-lightbox="images/portfolio/NASA_Paper_Clip.jpg" data-caption="NASA CANSAT Research Paper">
           <div class="research-card-img-wrap">
             <img src="images/portfolio/NASA_Paper_Clip.jpg" alt="NASA CANSAT Paper" loading="lazy">
           </div>
-          <div class="research-caption"><span>NASA CANSAT Paper</span><i class="fa fa-search-plus"></i></div>
+          <div class="research-caption"><span>NASA CANSAT Paper</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="research-card" data-lightbox="images/portfolio/DRDOPaperClip.jpg" data-caption="DRDO Paper Publication">
           <div class="research-card-img-wrap">
             <img src="images/portfolio/DRDOPaperClip.jpg" alt="DRDO Paper Publication" loading="lazy">
           </div>
-          <div class="research-caption"><span>DRDO Paper Publication</span><i class="fa fa-search-plus"></i></div>
+          <div class="research-caption"><span>DRDO Paper Publication</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="research-card" data-lightbox="images/portfolio/FrontPageDRDOPaperClip.jpg" data-caption="DRDO Paper Front Page">
           <div class="research-card-img-wrap">
             <img src="images/portfolio/FrontPageDRDOPaperClip.jpg" alt="DRDO Paper Front Page" loading="lazy">
           </div>
-          <div class="research-caption"><span>DRDO Paper — Front Page</span><i class="fa fa-search-plus"></i></div>
+          <div class="research-caption"><span>DRDO Paper — Front Page</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="research-card" data-lightbox="images/portfolio/All Certificates/Research_Paper.jpg" data-caption="Published Research Paper">
           <div class="research-card-img-wrap">
             <img src="images/portfolio/All Certificates/Research_Paper.jpg" alt="Published Research Paper" loading="lazy">
           </div>
-          <div class="research-caption"><span>Published Research Paper</span><i class="fa fa-search-plus"></i></div>
+          <div class="research-caption"><span>Published Research Paper</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
         </div>
       </div>
     </div>
@@ -1745,7 +1938,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         <div class="research-card-img-wrap" style="height:280px;">
           <img src="images/portfolio/IIMC_GroupPics.jpg" alt="IIM Calcutta EPYM Group Photo" loading="lazy">
         </div>
-        <div class="research-caption"><span>IIM Calcutta — EPYM Batch</span><i class="fa fa-search-plus"></i></div>
+        <div class="research-caption"><span>IIM Calcutta — EPYM Batch</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
       </div>
     </div>
   </div>
@@ -1754,7 +1947,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      12. MUTUAL VALUE
      ═══════════════════════════════════════════════ -->
-<section id="value" class="section dark-section" style="margin-top:24px;">
+<section id="value" class="section dark-section" aria-label="Mutual Value" style="margin-top:24px;">
   <div class="shell">
     <div class="heading center reveal">
       <p class="eyebrow">11 / Mutual value</p>
@@ -1763,14 +1956,14 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 
     <div class="value-grid">
       <div class="value-col reveal">
-        <h3><i class="fa fa-arrow-right"></i> What I bring</h3>
+        <h3><i class="fa fa-arrow-right" aria-hidden="true"></i> What I bring</h3>
         <ul class="value-items">
-          <li><i class="fa fa-check"></i> 14+ years of enterprise quality engineering depth</li>
-          <li><i class="fa fa-check"></i> Architecture thinking — frameworks, not scripts</li>
-          <li><i class="fa fa-check"></i> End-to-end automation expertise across UI, API, and integration</li>
-          <li><i class="fa fa-check"></i> Proven team leadership and mentoring of 18+ engineers</li>
-          <li><i class="fa fa-check"></i> AI/GenAI adoption and Playwright MCP implementation</li>
-          <li><i class="fa fa-check"></i> Problem-solving mindset grounded in engineering principles</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> 14+ years of enterprise quality engineering depth</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Architecture thinking — frameworks, not scripts</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> End-to-end automation expertise across UI, API, and integration</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Proven team leadership and mentoring of 18+ engineers</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> AI/GenAI adoption and Playwright MCP implementation</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Problem-solving mindset grounded in engineering principles</li>
         </ul>
       </div>
 
@@ -1779,14 +1972,14 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
       </div>
 
       <div class="value-col reveal" data-delay="0.1s">
-        <h3><i class="fa fa-arrow-left"></i> What your organization gains</h3>
+        <h3><i class="fa fa-arrow-left" aria-hidden="true"></i> What your organization gains</h3>
         <ul class="value-items">
-          <li><i class="fa fa-star"></i> Faster feedback loops and release confidence</li>
-          <li><i class="fa fa-star"></i> Reduced regression effort and improved test stability</li>
-          <li><i class="fa fa-star"></i> Scalable automation that grows with the product</li>
-          <li><i class="fa fa-star"></i> Engineering productivity through custom tools and workflows</li>
-          <li><i class="fa fa-star"></i> Future-ready AI-driven quality capabilities</li>
-          <li><i class="fa fa-star"></i> A culture of continuous improvement and engineering excellence</li>
+          <li><i class="fa fa-star" aria-hidden="true"></i> Faster feedback loops and release confidence</li>
+          <li><i class="fa fa-star" aria-hidden="true"></i> Reduced regression effort and improved test stability</li>
+          <li><i class="fa fa-star" aria-hidden="true"></i> Scalable automation that grows with the product</li>
+          <li><i class="fa fa-star" aria-hidden="true"></i> Engineering productivity through custom tools and workflows</li>
+          <li><i class="fa fa-star" aria-hidden="true"></i> Future-ready AI-driven quality capabilities</li>
+          <li><i class="fa fa-star" aria-hidden="true"></i> A culture of continuous improvement and engineering excellence</li>
         </ul>
       </div>
     </div>
@@ -1796,7 +1989,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <!-- ═══════════════════════════════════════════════
      11. CONTACT
      ═══════════════════════════════════════════════ -->
-<section id="contact" class="contact-section">
+<section id="contact" class="contact-section" aria-label="Contact Information">
   <div class="shell contact-grid reveal">
     <div>
       <p class="eyebrow">12 / Let's connect</p>
@@ -1806,7 +1999,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
       <p>For enterprise automation leadership, quality engineering, or AI-driven testing opportunities — I'd be glad to connect.</p>
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
         <a class="email" href="mailto:vivek.ranjan.srm@gmail.com">vivek.ranjan.srm@gmail.com</a>
-        <button type="button" class="copy-btn" data-copy="vivek.ranjan.srm@gmail.com" title="Copy email address"><i class="fa fa-copy"></i> Copy</button>
+        <button type="button" class="copy-btn" data-copy="vivek.ranjan.srm@gmail.com" title="Copy email address"><i class="fa fa-copy" aria-hidden="true"></i> Copy</button>
       </div>
       <p style="margin-top:12px;"><a href="tel:+917507416993">+91 7507416993</a></p>
       <div class="social-links">
@@ -1820,7 +2013,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 
 <!-- Image Lightbox Overlay -->
 <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" aria-label="Close image viewer"><i class="fa fa-times"></i></button>
+  <button class="lightbox-close" aria-label="Close image viewer"><i class="fa fa-times" aria-hidden="true"></i></button>
   <img src="" alt="">
   <div class="lightbox-caption"></div>
 </div>
@@ -1833,19 +2026,19 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <footer>
   <div class="shell">
     <span>&copy; <span id="year"></span> Vivek Ranjan</span>
-    <a href="#home">Back to top <i class="fa fa-arrow-up"></i></a>
+    <a href="#home">Back to top <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
   </div>
 </footer>
 
 <!-- Interactive Back to Top Floating Button -->
 <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
-  <i class="fa fa-arrow-up"></i>
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
   <span>Top</span>
 </button>
 
 <!-- Interactive Copy Toast -->
 <div id="copyToast" class="copy-toast" role="status" aria-live="polite">
-  <i class="fa fa-check-circle"></i>
+  <i class="fa fa-check-circle" aria-hidden="true"></i>
   <span id="toastMsg">Copied to clipboard!</span>
 </div>
 

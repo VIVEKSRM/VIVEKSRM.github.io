@@ -376,4 +376,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 17. Floating Hire Badge — hide when contact section is visible
+    const hireBadge = document.getElementById('hireBadge');
+    const contactSection = document.getElementById('contact');
+    if (hireBadge && contactSection) {
+        const badgeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    hireBadge.style.opacity = '0';
+                    hireBadge.style.pointerEvents = 'none';
+                } else {
+                    hireBadge.style.opacity = '';
+                    hireBadge.style.pointerEvents = '';
+                }
+            });
+        }, { threshold: 0.2 });
+        badgeObserver.observe(contactSection);
+    }
 });

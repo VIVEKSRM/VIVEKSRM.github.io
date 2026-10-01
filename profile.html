@@ -615,6 +615,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero, .hero::before, .hero h1 em, .phases.timeline-active::after { animation: none !important; }
+  .hire-badge { animation: none !important; opacity: 1; }
   .metric-ring-fill { transition: none !important; }
   .step-node, .phase-dot, .metric, .problem-card, .future-card, .testimonial-card { transition: none; }
   html { scroll-behavior: auto; }
@@ -694,6 +695,130 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   display: none;
 }
 
+
+/* ═══════════════════════════════════════════════
+   LEADERSHIP PHILOSOPHY
+   ═══════════════════════════════════════════════ */
+.philosophy-section { padding: 80px 0 60px; background: linear-gradient(180deg, var(--paper) 0%, #edf4f7 100%); }
+.philosophy-block { position: relative; }
+.philosophy-accent {
+  position: absolute; left: -20px; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(to bottom, var(--aqua), var(--blue));
+  border-radius: 2px;
+}
+.philosophy-quote {
+  margin: 0 0 48px; padding: 0 0 0 24px;
+}
+.philosophy-quote p {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem); line-height: 1.5;
+  color: var(--ink); font-weight: 500; font-style: italic;
+  letter-spacing: -.01em;
+}
+.philosophy-quote em {
+  font-style: italic; color: var(--blue); font-weight: 700;
+}
+.philosophy-principles {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.principle {
+  padding: 28px 24px; background: #fff; border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(16, 45, 69, 0.06);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.principle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(16, 45, 69, 0.12);
+  border-color: var(--aqua);
+}
+.principle-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: linear-gradient(135deg, #e0f7f4, #d4eef8);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; color: var(--blue); margin-bottom: 16px;
+}
+.principle h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--ink); }
+.principle p { font-size: .85rem; color: var(--muted); margin: 0; line-height: 1.55; }
+
+/* ═══════════════════════════════════════════════
+   CURRENTLY BUILDING
+   ═══════════════════════════════════════════════ */
+.currently-section { padding: 80px 0; background: var(--paper); }
+.currently-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px;
+}
+.currently-card {
+  padding: 28px 24px; background: #fff; border: 1px solid var(--line);
+  border-radius: 18px; box-shadow: 0 8px 24px rgba(16, 45, 69, 0.06);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+  position: relative; overflow: hidden;
+}
+.currently-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(16, 45, 69, 0.12);
+  border-color: var(--aqua);
+}
+.currently-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--aqua), var(--blue));
+  opacity: 0; transition: opacity .25s;
+}
+.currently-card:hover::before { opacity: 1; }
+.currently-status {
+  display: inline-block; padding: 3px 10px; border-radius: 12px;
+  font-size: .68rem; font-weight: 800; letter-spacing: .04em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+.currently-status.building { background: #e0f7e9; color: #1a7a42; }
+.currently-status.exploring { background: #e8f0fc; color: #2e6bb5; }
+.currently-status.certified { background: #fef3e0; color: #b87a1a; }
+.currently-card h3 {
+  font-size: 1.05rem; margin-bottom: 10px; color: var(--ink);
+  display: flex; align-items: center; gap: 8px;
+}
+.currently-card h3 i { color: var(--blue); font-size: 1rem; }
+.currently-card p { font-size: .85rem; color: var(--muted); line-height: 1.55; margin-bottom: 16px; }
+.currently-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.currently-tags span {
+  padding: 3px 10px; background: var(--mist); border-radius: 6px;
+  font-size: .72rem; font-weight: 700; color: var(--blue);
+}
+
+/* ═══════════════════════════════════════════════
+   FLOATING HIRE BADGE
+   ═══════════════════════════════════════════════ */
+.hire-badge {
+  position: fixed; bottom: 28px; right: 28px; z-index: 120;
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 22px; border-radius: 50px;
+  background: linear-gradient(135deg, var(--night), #163250);
+  border: 1px solid rgba(131, 228, 216, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(131, 228, 216, 0.15);
+  text-decoration: none; color: #fff;
+  font-size: .82rem; font-weight: 700;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  transition: all .3s cubic-bezier(.2, .8, .2, 1);
+  cursor: pointer;
+  animation: hireBadgeEntry 0.6s ease-out 2s both;
+}
+.hire-badge:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5), 0 0 30px rgba(131, 228, 216, 0.25);
+  border-color: var(--aqua);
+}
+@keyframes hireBadgeEntry {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hire-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #41b989; box-shadow: 0 0 8px #41b989;
+  animation: pulseGlow 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.hire-text { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.hire-text i { color: var(--aqua); }
+
 /* ═══════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════ */
@@ -717,6 +842,10 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   .nav .nav-resume { margin: 6px 0 0; text-align: center; }
   .nav-social { margin: 8px 0 0; padding: 8px 0 0; border-left: 0; border-top: 1px solid var(--line); justify-content: flex-start; }
   .hero { padding: 58px 0; }
+  .philosophy-principles { grid-template-columns: 1fr; gap: 16px; }
+  .philosophy-accent { left: 0; }
+  .currently-grid { grid-template-columns: 1fr; gap: 14px; }
+  .hire-badge { bottom: 16px; right: 16px; padding: 10px 16px; font-size: .75rem; }
   .actions { flex-direction: column; }
   .actions .button { width: 100%; justify-content: center; }
   .hero-grid, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
@@ -774,6 +903,10 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   .problems-grid, .future-grid, .testimonials-grid, .tech-groups, .metrics-grid { grid-template-columns: 1fr; }
   .phases { grid-template-columns: 1fr; }
   .contact-section { padding: 64px 0; }
+  .philosophy-section { padding: 50px 0 30px; }
+  .philosophy-quote p { font-size: 1.05rem; }
+  .currently-section { padding: 50px 0; }
+  .hire-badge { bottom: 12px; right: 12px; padding: 9px 14px; font-size: .72rem; }
   .dark-section { margin: 0 8px; border-radius: 22px; }
   .ai-flow { flex-wrap: wrap; gap: 8px; padding: 20px 14px; }
   .ai-flow-arrow { display: none; }
@@ -1065,6 +1198,38 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
           <a class="hpc-tag" href="#skills" title="View API Automation"><i class="fa fa-exchange" aria-hidden="true"></i> REST API</a>
           <a class="hpc-tag" href="#skills" title="View CI/CD Pipelines"><i class="fa fa-cogs" aria-hidden="true"></i> CI/CD</a>
           <a class="hpc-tag" href="#ai-future" title="View AI & GenAI Quality Strategy"><i class="fa fa-magic" aria-hidden="true"></i> GenAI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     ENGINEERING PHILOSOPHY — The Senior Leader Signal
+     ═══════════════════════════════════════════════ -->
+<section class="section philosophy-section" aria-label="Engineering Philosophy">
+  <div class="shell">
+    <div class="philosophy-block reveal">
+      <div class="philosophy-accent" aria-hidden="true"></div>
+      <blockquote class="philosophy-quote">
+        <p>"Automation is architecture, not scripting. Quality isn't a phase at the end of a sprint — it's a <em>first-class engineering discipline</em> that must be designed into every layer of the system."</p>
+      </blockquote>
+      <div class="philosophy-principles">
+        <div class="principle reveal" data-delay="0.1s">
+          <div class="principle-icon"><i class="fa fa-sitemap" aria-hidden="true"></i></div>
+          <h3>Systems over scripts</h3>
+          <p>I design frameworks that scale across teams, not automation scripts that break every sprint.</p>
+        </div>
+        <div class="principle reveal" data-delay="0.2s">
+          <div class="principle-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+          <h3>Teams that own quality</h3>
+          <p>I build engineering cultures where quality is everyone's responsibility — not just the QA team's problem.</p>
+        </div>
+        <div class="principle reveal" data-delay="0.3s">
+          <div class="principle-icon"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+          <h3>Speed through confidence</h3>
+          <p>The fastest teams aren't those who skip testing — they're those who've automated the right tests at the right layer.</p>
         </div>
       </div>
     </div>
@@ -1986,6 +2151,45 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════
+     CURRENTLY BUILDING — Active Growth Signal
+     ═══════════════════════════════════════════════ -->
+<section class="section currently-section" aria-label="Currently Working On">
+  <div class="shell">
+    <div class="heading center reveal">
+      <p class="eyebrow"><span></span>What's on my radar</p>
+      <h2>Currently <em>building &amp; exploring.</em></h2>
+    </div>
+    <div class="currently-grid">
+      <div class="currently-card reveal" data-delay="0s">
+        <div class="currently-status building">In Progress</div>
+        <h3><i class="fa fa-cogs" aria-hidden="true"></i> AI-Powered Test Orchestration</h3>
+        <p>Building intelligent test selection pipelines using n8n workflow automation and LLM-driven test prioritization for enterprise CI/CD.</p>
+        <div class="currently-tags">
+          <span>n8n</span><span>GenAI</span><span>CI/CD</span>
+        </div>
+      </div>
+      <div class="currently-card reveal" data-delay="0.1s">
+        <div class="currently-status exploring">Exploring</div>
+        <h3><i class="fa fa-magic" aria-hidden="true"></i> Agentic QA Pipelines</h3>
+        <p>Researching autonomous testing agents that can understand requirements, generate tests, execute them, and report defects — with zero human intervention.</p>
+        <div class="currently-tags">
+          <span>Agentic AI</span><span>Playwright MCP</span><span>LLM</span>
+        </div>
+      </div>
+      <div class="currently-card reveal" data-delay="0.2s">
+        <div class="currently-status certified">Recently Certified</div>
+        <h3><i class="fa fa-certificate" aria-hidden="true"></i> Google Cloud &amp; AI</h3>
+        <p>Completed Google Cloud Gemini certification and Salesforce AI Associate — strengthening cloud-native and AI-driven quality engineering capabilities.</p>
+        <div class="currently-tags">
+          <span>Google Gemini</span><span>Salesforce AI</span><span>Cloud</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════════════
      11. CONTACT
      ═══════════════════════════════════════════════ -->
@@ -2041,6 +2245,13 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   <i class="fa fa-check-circle" aria-hidden="true"></i>
   <span id="toastMsg">Copied to clipboard!</span>
 </div>
+
+
+<!-- Floating Hire Badge -->
+<a href="#contact" class="hire-badge" id="hireBadge" aria-label="Open to opportunities — click to contact">
+  <span class="hire-pulse" aria-hidden="true"></span>
+  <span class="hire-text"><i class="fa fa-briefcase" aria-hidden="true"></i> Open to Opportunities</span>
+</a>
 
 <script src="js/profile.js"></script>
 </body>

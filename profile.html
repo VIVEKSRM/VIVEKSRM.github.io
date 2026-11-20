@@ -132,6 +132,7 @@ ul, ol { margin-top: 0; }
 .nav-social a { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 50%; color: #147aab; font-size: .88rem; }
 .nav-social a:hover { color: #fff; background: #147aab; }
 .nav-toggle { display: none; border: 0; background: none; font-size: 1.35rem; cursor: pointer; color: var(--ink); }
+.nav-close { display: none; }
 
 /* ═══════════════════════════════════════════════
    SECTION BASE
@@ -841,6 +842,9 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
   .nav a { padding: 14px 0; min-height: 44px; display: flex; align-items: center; }
   .nav .nav-resume { margin: 6px 0 0; text-align: center; }
   .nav-social { margin: 8px 0 0; padding: 8px 0 0; border-left: 0; border-top: 1px solid var(--line); justify-content: flex-start; }
+  .nav-social { width: 100%; }
+  .nav-close { margin-left: auto; width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); font-size: 1rem; cursor: pointer; }
+  .nav-close:hover { background: var(--mist); color: var(--blue); }
   .hero { padding: 58px 0; }
   .philosophy-principles { grid-template-columns: 1fr; gap: 16px; }
   .philosophy-accent { left: 0; }
@@ -1149,6 +1153,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
       <span class="nav-social" aria-label="Social links">
         <a href="https://www.linkedin.com/in/vivek-ranjan-profile/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         <a href="https://github.com/VIVEKSRM" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <button class="nav-close" type="button" aria-label="Close navigation menu" title="Close menu"><i class="fa fa-times" aria-hidden="true"></i></button>
       </span>
       <a class="nav-resume" href="Documents/Vivek_Ranjan_Resume_24072026.pdf" download>Resume <i class="fa fa-download" aria-hidden="true"></i></a>
     </nav>

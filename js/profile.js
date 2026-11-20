@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. DOM Elements
     const header = document.querySelector('.site-header');
     const navToggle = document.querySelector('.nav-toggle');
+    const navClose = document.querySelector('.nav-close');
     const nav = document.querySelector('.nav');
     const navLinks = document.querySelectorAll('.nav a[href^="#"]');
     const sections = document.querySelectorAll('section[id]');
@@ -35,6 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Mobile Navigation
     if (navToggle && nav) {
+        navClose?.addEventListener('click', () => {
+            nav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open menu');
+        });
         navToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';

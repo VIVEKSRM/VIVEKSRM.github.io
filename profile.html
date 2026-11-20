@@ -942,6 +942,9 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 }
 .award-timeline li strong { color: var(--ink); display: block; }
 .award-timeline li .yr { font: 500 .7rem 'DM Mono', monospace; color: var(--blue); }
+ .press-heading { font-size: 1.15rem; margin-bottom: 0; display: flex; align-items: center; gap: 10px; color: var(--ink); }
+ .press-heading i { color: var(--blue); }
+
 .award-gallery {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
 }
@@ -1120,7 +1123,7 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
     <div class="header-left">
       <!-- Extreme Left Segmented Version Switcher -->
       <label class="header-version-switch" title="Switch to Classic website">
-        <input type="checkbox" checked onchange="if(!this.checked){window.location.href='index.html';}" aria-label="Toggle profile page version">
+        <input type="checkbox" checked onchange="if(!this.checked){window.location.href='classic.html';}" aria-label="Toggle profile page version">
         <span class="hvs-track">
           <span class="hvs-opt hvs-classic">Classic</span>
           <span class="hvs-thumb"></span>
@@ -1904,6 +1907,10 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
             <img src="images/portfolio/Standing_Ovation_Award_Professionalism.png" alt="TechM Standing Ovation Award - Professionalism" loading="lazy">
             <div class="award-caption">Standing Ovation — Professionalism</div>
           </div>
+          <div class="award-img" data-lightbox="images/portfolio/IIMC_GroupPics.jpg" data-caption="IIM Calcutta Executive Programme for Young Managers, 2016–2017">
+            <img src="images/portfolio/IIMC_GroupPics.jpg" alt="IIM Calcutta Executive Programme for Young Managers class of 2016–2017" loading="lazy">
+            <div class="award-caption">IIM Calcutta Executive MBA</div>
+          </div>
           <div class="award-img" data-lightbox="images/portfolio/All Certificates/Standing_Ovation_Award_Customer_First.png" data-caption="TechM Standing Ovation Award — Customer First">
             <img src="images/portfolio/All Certificates/Standing_Ovation_Award_Customer_First.png" alt="TechM Standing Ovation Award - Customer First" loading="lazy">
             <div class="award-caption">Standing Ovation — Customer First</div>
@@ -1912,9 +1919,9 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
             <img src="images/portfolio/All Certificates/Pat_On_The_Back_Award.png" alt="Pat on the Back Award" loading="lazy">
             <div class="award-caption">Pat on the Back Award</div>
           </div>
-          <div class="award-img" data-lightbox="images/portfolio/All Certificates/Accenture_ACE_Award.jpg" data-caption="Accenture Celebrate Excellence (ACE) Award">
-            <img src="images/portfolio/All Certificates/Accenture_ACE_Award.jpg" alt="Accenture ACE Award" loading="lazy">
-            <div class="award-caption">Accenture ACE Award</div>
+          <div class="award-img" data-lightbox="images/portfolio/All Certificates/ACE_Award.jpg" data-caption="Accenture Celebrate Excellence Numero Uno Award">
+            <img src="images/portfolio/All Certificates/ACE_Award.jpg" alt="Accenture Celebrate Excellence Numero Uno Award" loading="lazy">
+            <div class="award-caption">Accenture Numero Uno ACE Award</div>
           </div>
           <div class="award-img" data-lightbox="images/portfolio/Accenture_InnovationAward.jpg" data-caption="Accenture Innovation Award">
             <img src="images/portfolio/Accenture_InnovationAward.jpg" alt="Accenture Innovation Award" loading="lazy">
@@ -1936,14 +1943,46 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
             <img src="images/portfolio/All Certificates/ISTQB Certification.jpg" alt="ISTQB Foundation Level Certification" loading="lazy">
             <div class="award-caption">ISTQB Certification</div>
           </div>
-          <div class="award-img" data-lightbox="images/portfolio/All Certificates/ROBOCON_2011.jpg" data-caption="ABU ROBOCON 2011 — Best Economical Robot Award">
-            <img src="images/portfolio/All Certificates/ROBOCON_2011.jpg" alt="ROBOCON 2011 Best Economical Robot" loading="lazy">
-            <div class="award-caption">ROBOCON 2011</div>
-          </div>
         </div>
       </div>
     </div>
 
+    <!-- Newspaper coverage; original scans remain in the project assets. -->
+    <div class="press-coverage reveal" style="margin-top:40px;">
+      <h3 class="press-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Newspaper Features</h3>
+      <div class="research-grid">
+        <div class="research-card" data-lightbox="images/portfolio/DRDO_Paper_Clip_College.jpg" data-caption="SRM wins the DRDO Best Innovation Award">
+          <div class="research-card-img-wrap">
+            <img src="images/portfolio/DRDO_Paper_Clip_College.jpg" alt="Newspaper clipping about SRM winning the DRDO Best Innovation Award" loading="lazy">
+          </div>
+          <div class="research-caption"><span>DRDO Best Innovation Award</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/DRDO_Paper_Clip.jpg" data-caption="DRDO innovation competition feature">
+          <div class="research-card-img-wrap">
+            <img src="images/portfolio/DRDO_Paper_Clip.jpg" alt="Newspaper feature about the DRDO innovation competition" loading="lazy">
+          </div>
+          <div class="research-caption"><span>DRDO Innovation Competition</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/NASA_Paper_Clip.jpg" data-caption="NASA CanSat competition feature">
+          <div class="research-card-img-wrap">
+            <img src="images/portfolio/NASA_Paper_Clip.jpg" alt="Newspaper feature about the NASA CanSat competition" loading="lazy">
+          </div>
+          <div class="research-caption"><span>NASA CanSat Competition</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/DRDOPaperClip.jpg" data-caption="DRDO robotics competition newspaper feature">
+          <div class="research-card-img-wrap">
+            <img src="images/portfolio/DRDOPaperClip.jpg" alt="Newspaper feature about the DRDO robotics competition" loading="lazy">
+          </div>
+          <div class="research-caption"><span>DRDO Robotics Competition</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="research-card" data-lightbox="images/portfolio/CANSAT_Compition.jpg" data-caption="CANSAT earns second place worldwide">
+          <div class="research-card-img-wrap">
+            <img src="images/portfolio/CANSAT_Compition.jpg" alt="Newspaper feature about SRM CANSAT earning second place worldwide" loading="lazy">
+          </div>
+          <div class="research-caption"><span>CANSAT: Second in the World</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+      </div>
+    </div>
     <!-- Certifications -->
     <div style="margin-top:50px;" class="reveal">
       <h3 style="font-size:1.15rem; margin-bottom:18px; display:flex; align-items:center; gap:10px;"><i class="fa fa-certificate" style="color:var(--blue);"></i> Certifications</h3>
@@ -2096,16 +2135,6 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
         </div>
       </div>
     </div>
-
-    <!-- IIM Group Photo -->
-    <div style="margin-top:30px;" class="reveal">
-      <div class="research-card" style="height:auto; max-width:720px; margin:0 auto;" data-lightbox="images/portfolio/IIMC_GroupPics.jpg" data-caption="IIM Calcutta — EPYM Batch">
-        <div class="research-card-img-wrap" style="height:280px;">
-          <img src="images/portfolio/IIMC_GroupPics.jpg" alt="IIM Calcutta EPYM Group Photo" loading="lazy">
-        </div>
-        <div class="research-caption"><span>IIM Calcutta — EPYM Batch</span><i class="fa fa-search-plus" aria-hidden="true"></i></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -2256,3 +2285,4 @@ footer a { color: var(--aqua); font-weight: 700; text-decoration: none; }
 <script src="js/profile.js"></script>
 </body>
 </html>
+
